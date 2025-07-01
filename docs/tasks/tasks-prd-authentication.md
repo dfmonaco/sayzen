@@ -28,20 +28,20 @@
 
 ## Tasks
 
-- [ ] 1.0 Set Up and Configure Devise Gem
+- [x] 1.0 Set Up and Configure Devise Gem
   - [x] 1.1 Add the `devise` gem to the `Gemfile`.
   - [x] 1.2 Run `bundle install` to install the gem.
   - [x] 1.3 Run the Devise installer: `rails generate devise:install`.
   - [x] 1.4 Configure `config/environments/development.rb` with the default
     URL options for the mailer.
-  - [ ] 1.5 **Acceptance:** Commit the initial Devise setup.
+  - [x] 1.5 **Acceptance:** Commit the initial Devise setup.
 
 - [ ] 2.0 Create User Model and Add Custom Fields
-  - [ ] 2.1 Run `rails generate devise User` to create the User model.
-  - [ ] 2.2 Create a migration to add `first_name` (string), `last_name`
-    (string), and `role` (string, default: 'user') to the `users` table.
-  - [ ] 2.3 Run `rails db:migrate` to apply the migration.
-  - [ ] 2.4 **Test:** Write model tests in `test/models/user_test.rb` to
+  - [x] 2.1 Run `rails generate devise User` to create the User model.
+  - [x] 2.2 Create a migration to add `first_name` (string), `last_name`
+    (string), and `role` (integer) to the `users` table. (Default 'user' will be set in application code using an enum)
+  - [x] 2.3 Run `rails db:migrate` to apply the migration.
+  - [x] 2.4 **Test:** Write model tests in `test/models/user_test.rb` to
     validate the presence of `first_name`, `last_name`, and `role`.
   - [ ] 2.5 **Acceptance:** Commit the User model changes once all model tests
     are passing.
