@@ -69,12 +69,12 @@
   - [x] 4.4 **Acceptance:** Commit the session functionality once the
     integration test is passing.
 
-- [ ] 5.0 Implement Role-Based Access Control
+- [x] 5.0 Implement Role-Based Access Control
   - [x] 5.1 Add a method in `ApplicationController` or a new concern to
     restrict access based on the `admin` role.
   - [x] 5.2 Create a simple admin-only page/dashboard to test the
     role-based access.
   - [x] 5.3 **Test:** Write an integration test to verify that admin-only pages
     are inaccessible to regular users but accessible to admins.
-  - [ ] 5.4 **Acceptance:** Commit the role-based access control feature once
+  - [x] 5.4 **Acceptance:** Commit the role-based access control feature once
     the tests are passing.
