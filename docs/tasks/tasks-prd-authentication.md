@@ -55,15 +55,15 @@
   - [x] 3.4 **Test:** Write an integration test in
     `test/integration/user_flows_test.rb` to cover the user sign-up
     process from start to finish.
-  - [ ] 3.5 **Acceptance:** Commit the registration feature once the
+  - [x] 3.5 **Acceptance:** Commit the registration feature once the
     integration test is passing.
 
 - [ ] 4.0 Implement User Sessions (Sign In/Sign Out)
-  - [ ] 4.1 Add sign-in and sign-out links to the main application layout
+  - [x] 4.1 Add sign-in and sign-out links to the main application layout
     (`app/views/layouts/application.html.erb`).
-  - [ ] 4.2 Ensure user-facing messages (e.g., "Signed in successfully.") are
+  - [x] 4.2 Ensure user-facing messages (e.g., "Signed in successfully.") are
     displayed in the layout.
-  - [ ] 4.3 **Test:** Write an integration test in
+  - [x] 4.3 **Test:** Write an integration test in
     `test/integration/user_flows_test.rb` that simulates a user signing in
     and then signing out.
   - [ ] 4.4 **Acceptance:** Commit the session functionality once the
