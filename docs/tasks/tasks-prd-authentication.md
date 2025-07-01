@@ -36,23 +36,23 @@
     URL options for the mailer.
   - [x] 1.5 **Acceptance:** Commit the initial Devise setup.
 
-- [ ] 2.0 Create User Model and Add Custom Fields
+- [x] 2.0 Create User Model and Add Custom Fields
   - [x] 2.1 Run `rails generate devise User` to create the User model.
   - [x] 2.2 Create a migration to add `first_name` (string), `last_name`
     (string), and `role` (integer) to the `users` table. (Default 'user' will be set in application code using an enum)
   - [x] 2.3 Run `rails db:migrate` to apply the migration.
   - [x] 2.4 **Test:** Write model tests in `test/models/user_test.rb` to
     validate the presence of `first_name`, `last_name`, and `role`.
-  - [ ] 2.5 **Acceptance:** Commit the User model changes once all model tests
+  - [x] 2.5 **Acceptance:** Commit the User model changes once all model tests
     are passing.
 
 - [ ] 3.0 Implement User Registration (Sign Up)
-  - [ ] 3.1 Generate Devise views: `rails generate devise:views`.
-  - [ ] 3.2 Modify `app/views/devise/registrations/new.html.erb` to include
+  - [x] 3.1 Generate Devise views: `rails generate devise:views`.
+  - [x] 3.2 Modify `app/views/devise/registrations/new.html.erb` to include
     the `first_name` and `last_name` fields.
-  - [ ] 3.3 Update `application_controller.rb` to permit the `first_name` and
+  - [x] 3.3 Update `application_controller.rb` to permit the `first_name` and
     `last_name` parameters for the `:sign_up` action.
-  - [ ] 3.4 **Test:** Write an integration test in
+  - [x] 3.4 **Test:** Write an integration test in
     `test/integration/user_flows_test.rb` to cover the user sign-up
     process from start to finish.
   - [ ] 3.5 **Acceptance:** Commit the registration feature once the
