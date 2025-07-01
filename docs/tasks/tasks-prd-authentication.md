@@ -29,10 +29,10 @@
 ## Tasks
 
 - [ ] 1.0 Set Up and Configure Devise Gem
-  - [ ] 1.1 Add the `devise` gem to the `Gemfile`.
-  - [ ] 1.2 Run `bundle install` to install the gem.
-  - [ ] 1.3 Run the Devise installer: `rails generate devise:install`.
-  - [ ] 1.4 Configure `config/environments/development.rb` with the default
+  - [x] 1.1 Add the `devise` gem to the `Gemfile`.
+  - [x] 1.2 Run `bundle install` to install the gem.
+  - [x] 1.3 Run the Devise installer: `rails generate devise:install`.
+  - [x] 1.4 Configure `config/environments/development.rb` with the default
     URL options for the mailer.
   - [ ] 1.5 **Acceptance:** Commit the initial Devise setup.
 
