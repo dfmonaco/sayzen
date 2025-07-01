@@ -58,7 +58,7 @@
   - [x] 3.5 **Acceptance:** Commit the registration feature once the
     integration test is passing.
 
-- [ ] 4.0 Implement User Sessions (Sign In/Sign Out)
+- [x] 4.0 Implement User Sessions (Sign In/Sign Out)
   - [x] 4.1 Add sign-in and sign-out links to the main application layout
     (`app/views/layouts/application.html.erb`).
   - [x] 4.2 Ensure user-facing messages (e.g., "Signed in successfully.") are
@@ -66,15 +66,15 @@
   - [x] 4.3 **Test:** Write an integration test in
     `test/integration/user_flows_test.rb` that simulates a user signing in
     and then signing out.
-  - [ ] 4.4 **Acceptance:** Commit the session functionality once the
+  - [x] 4.4 **Acceptance:** Commit the session functionality once the
     integration test is passing.
 
 - [ ] 5.0 Implement Role-Based Access Control
-  - [ ] 5.1 Add a method in `ApplicationController` or a new concern to
+  - [x] 5.1 Add a method in `ApplicationController` or a new concern to
     restrict access based on the `admin` role.
-  - [ ] 5.2 Create a simple admin-only page/dashboard to test the
+  - [x] 5.2 Create a simple admin-only page/dashboard to test the
     role-based access.
-  - [ ] 5.3 **Test:** Write an integration test to verify that admin-only pages
+  - [x] 5.3 **Test:** Write an integration test to verify that admin-only pages
     are inaccessible to regular users but accessible to admins.
   - [ ] 5.4 **Acceptance:** Commit the role-based access control feature once
     the tests are passing.
