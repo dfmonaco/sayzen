@@ -1,3 +1,36 @@
+const CACHE_NAME = 'sayzen-cache-v1';
+const urlsToCache = [
+  '/',
+  '<%= asset_path("application.css") %>',
+  '<%= asset_path("application.js") %>',
+  '/icon.png',
+  '/icon.svg'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      })
+  );
+});
+
 // Add a service worker for processing Web Push notifications:
 //
 // self.addEventListener("push", async (event) => {
