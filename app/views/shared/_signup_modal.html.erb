@@ -28,16 +28,16 @@
         <%= f.label :password, class: "form__label" %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
+        <% end %>
         <%= f.password_field :password, autocomplete: "new-password", class: "form__input", placeholder: "Create a strong password" %>
       </div>
 
       <div class="form__group">
-        <%= f.label :password_confirmation, class: "form__label" %><br />
+        <%= f.label :password_confirmation, class: "form__label" %>
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form__input" %>
       </div>
 
-      <div class="form__group">
+      <div class="form__group form__group--submit">
         <%= f.submit "Sign up", class: "btn btn--primary btn--h-11" %>
       </div>
     <% end %>

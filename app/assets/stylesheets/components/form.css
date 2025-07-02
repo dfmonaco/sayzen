@@ -1,7 +1,19 @@
 /* app/assets/stylesheets/components/form.css */
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: theme('spacing.4');
+}
+
 .form__group {
-  /* No specific styles needed for the group wrapper itself */
+  display: flex;
+  flex-direction: column;
+  gap: theme('spacing.2');
+}
+
+.form__group--submit {
+  margin-top: theme('spacing.2');
 }
 
 .form__label {
