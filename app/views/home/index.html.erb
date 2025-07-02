@@ -1,5 +1,4 @@
-<div class="layout-container">
-  <section class="hero">
+<section class="hero">
     <div class="container">
       <h1 class="hero__title">
         Unlock Your World with <span class="hero__title-highlight">SayZen</span>
@@ -7,7 +6,7 @@
       <p class="hero__description">
         Master any language with our immersive, AI-powered courses. Join a global community and start your fluent journey today.
       </p>
-      <button class="btn btn--primary btn--h-12" id="signupBtnHero">
+      <button class="btn btn--primary btn--h-12" id="signupBtnHero" data-action="click->modal#open">
         <span class="btn__text">Start Learning</span>
       </button>
       <div class="hero__image-container">
@@ -94,7 +93,7 @@
       <p class="cta__description">
         Join thousands of learners worldwide and experience the joy of mastering a new language with SayZen. Your journey to fluency starts now!
       </p>
-      <button class="btn btn--cta" id="signupBtnCTA">
+      <button class="btn btn--cta" id="signupBtnCTA" data-action="click->modal#open">
         <span class="btn__hover-overlay"></span>
         <span class="btn__text">Start Learning Now</span>
       </button>
@@ -103,4 +102,4 @@
 
   <%= render "shared/login_modal" %>
   <%= render "shared/signup_modal" %>
-</div>
+

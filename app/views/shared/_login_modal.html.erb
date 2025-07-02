@@ -1,8 +1,8 @@
-<div class="modal" id="loginModal">
+<div class="modal" id="loginModal" data-modal-target="loginModal">
   <div class="modal__content">
     <div class="modal__header">
       <h3 class="modal__title">Log In to SayZen</h3>
-      <button class="modal__close-button" id="closeLoginModal">
+      <button class="modal__close-button" id="closeLoginModal" data-action="click->modal#close">
         <svg class="modal__close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
       </button>
     </div>
@@ -18,7 +18,7 @@
       <button class="btn btn--primary btn--h-11" type="submit">Log In</button>
     </form>
     <p class="form__footer-text">
-      Don't have an account? <button class="form__footer-link" id="switchToSignup">Sign up</button>
+      Don't have an account? <button class="form__footer-link" id="switchToSignup" data-action="click->modal#switch">Sign up</button>
     </p>
   </div>
 </div>
