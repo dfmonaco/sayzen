@@ -1,0 +1,39 @@
+/* app/assets/stylesheets/components/layout.css */
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-light);
+  font-family: 'Lexend', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: theme('spacing.6');
+  padding-right: theme('spacing.6');
+}
+
+@media (min-width: theme('screens.sm')) {
+  .container {
+    max-width: theme('screens.sm');
+  }
+}
+@media (min-width: theme('screens.md')) {
+  .container {
+    max-width: theme('screens.md');
+  }
+}
+@media (min-width: theme('screens.lg')) {
+  .container {
+    max-width: theme('screens.lg');
+  }
+}
+@media (min-width: theme('screens.xl')) {
+  .container {
+    max-width: theme('screens.xl');
+  }
+}

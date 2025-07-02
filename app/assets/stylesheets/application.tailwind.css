@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+:root {
+  --primary-color: #5A6F5F;
+  --secondary-color: #3E2C2C;
+  --accent-color: #D4AF37;
+  --text-light: #7C7C7C;
+  --text-dark: #3E2C2C;
+  --background-light: #F5F5F0;
+  --background-dark: #EAE8E1;
+  --gradient-start: #5A6F5F;
+  --gradient-end: #4B5C4E;
+}
+
+@import "./components/layout.css";
+@import "./components/navigation.css";
+@import "./components/button.css";
+@import "./components/form.css";
+@import "./components/card.css";
+@import "./components/hero.css";
+@import "./components/modal.css";
