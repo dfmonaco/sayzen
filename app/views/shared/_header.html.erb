@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="header__logo">
+    <%= link_to root_path, class: "header__logo-link" do %>
+      <svg class="header__logo-icon" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+      </svg>
+      <h2 class="header__logo-text">SayZen</h2>
+    <% end %>
+  </div>
+  <nav class="header__nav">
+    <a class="header__nav-link" href="#">Home</a>
+    <a class="header__nav-link" href="#">Features</a>
+    <a class="header__nav-link" href="#">Testimonials</a>
+    <a class="header__nav-link" href="#">Pricing</a>
+  </nav>
+  <div class="header__actions">
+    <button class="btn btn--secondary btn--h-10" id="loginBtn">
+      Log In
+    </button>
+    <button class="btn btn--primary btn--h-10" id="signupBtnHeader">
+      <span class="btn__text">Get Started</span>
+    </button>
+    <button class="header__mobile-menu-button">
+      <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <line x1="3" x2="21" y1="12" y2="12"></line>
+        <line x1="3" x2="21" y1="6" y2="6"></line>
+        <line x1="3" x2="21" y1="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</header>
