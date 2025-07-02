@@ -1,0 +1,3 @@
+[submodule "docs/ai-context"]
+	path = docs/ai-context
+	url = git@github.com:dfmonaco/ai-context.git
