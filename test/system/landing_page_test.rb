@@ -1,6 +1,14 @@
 require "application_system_test_case"
 
 class LandingPageTest < ApplicationSystemTestCase
+  setup do
+    @user = User.create!(first_name: "Test", last_name: "User", email: "test@example.com", password: "password", password_confirmation: "password")
+  end
+
+  teardown do
+    User.destroy_all
+  end
+
   test "visiting the landing page" do
     visit root_url
     assert_selector "h1", text: "Unlock Your World with SayZen"
@@ -51,5 +59,65 @@ class LandingPageTest < ApplicationSystemTestCase
     assert_selector "#signupModal.modal--open"
     find("body").send_keys(:escape)
     assert_no_selector "#signupModal.modal--open"
+  end
+
+  test "successful sign up" do
+    visit root_url
+    click_on "Get Started"
+
+    within "#signupModal" do
+      fill_in "First Name", with: "New"
+      fill_in "Last Name", with: "User"
+      fill_in "Email Address", with: "new@example.com"
+      fill_in "Password", with: "password"
+      fill_in "Password confirmation", with: "password"
+      click_on "Sign up"
+    end
+
+    assert_text "Welcome! You have signed up successfully."
+  end
+
+  test "unsuccessful sign up" do
+    visit root_url
+    click_on "Get Started"
+
+    within "#signupModal" do
+      fill_in "First Name", with: "Test"
+      fill_in "Last Name", with: "User"
+      fill_in "Email Address", with: "test@example.com"
+      fill_in "Password", with: "password"
+      fill_in "Password confirmation", with: "wrong_password"
+      click_on "Sign up"
+    end
+
+    assert_selector "#signupModal.modal--open"
+    assert_text "Password confirmation doesn't match Password"
+  end
+
+  test "successful sign in" do
+    visit root_url
+    click_on "Log In"
+
+    within "#loginModal" do
+      fill_in "Email Address", with: @user.email
+      fill_in "Password", with: "password"
+      click_on "Log In"
+    end
+
+    assert_text "Signed in successfully."
+  end
+
+  test "unsuccessful sign in" do
+    visit root_url
+    click_on "Log In"
+
+    within "#loginModal" do
+      fill_in "Email Address", with: @user.email
+      fill_in "Password", with: "wrong_password"
+      click_on "Log In"
+    end
+
+    assert_selector "#loginModal.modal--open"
+    assert_text "Invalid Email or password."
   end
 end

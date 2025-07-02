@@ -6,17 +6,29 @@
         <svg class="modal__close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
       </button>
     </div>
-    <form class="form">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form" }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
       <div class="form__group">
-        <label class="form__label" for="loginEmail">Email Address</label>
-        <input class="form__input" id="loginEmail" name="loginEmail" placeholder="you@example.com" required="" type="email"/>
+        <%= f.label :email, "Email Address", class: "form__label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form__input", placeholder: "you@example.com" %>
       </div>
+
       <div class="form__group">
-        <label class="form__label" for="loginPassword">Password</label>
-        <input class="form__input" id="loginPassword" name="loginPassword" placeholder="••••••••" required="" type="password"/>
+        <%= f.label :password, class: "form__label" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form__input", placeholder: "••••••••" %>
       </div>
-      <button class="btn btn--primary btn--h-11" type="submit">Log In</button>
-    </form>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="form__group">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="form__group">
+        <%= f.submit "Log In", class: "btn btn--primary btn--h-11" %>
+      </div>
+    <% end %>
     <p class="form__footer-text">
       Don't have an account? <button class="form__footer-link" id="switchToSignup" data-action="click->modal#switch">Sign up</button>
     </p>
