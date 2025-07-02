@@ -120,4 +120,26 @@ class LandingPageTest < ApplicationSystemTestCase
     assert_selector "#loginModal.modal--open"
     assert_text "Invalid Email or password."
   end
+
+  test "header changes after sign in" do
+    visit root_url
+    assert_text "Log In"
+    assert_text "Get Started"
+    assert_no_text "Dashboard"
+    assert_no_text "Log Out"
+
+    click_on "Log In"
+    within "#loginModal" do
+      fill_in "Email Address", with: @user.email
+      fill_in "Password", with: "password"
+      click_on "Log In"
+    end
+
+    assert_text "Signed in successfully."
+    assert_no_selector "#loginModal.modal--open"
+    assert_no_text "Log In"
+    assert_no_text "Get Started"
+    assert_text "Dashboard"
+    assert_text "Log Out"
+  end
 end
