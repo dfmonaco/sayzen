@@ -1,4 +1,4 @@
-<div class="modal" id="signupModal" data-modal-target="signupModal">
+<div class="modal<%= ' modal--open' if local_assigns.fetch(:open, false) %>" id="signupModal" data-modal-target="signupModal">
   <div class="modal__content">
     <div class="modal__header">
       <h3 class="modal__title">Create Your SayZen Account</h3>

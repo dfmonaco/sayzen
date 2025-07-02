@@ -6,6 +6,17 @@ export default class extends Controller {
   connect() {
     this.boundCloseOnEscape = this.closeOnEscape.bind(this)
     this.boundCloseOnBackdrop = this.closeOnBackdrop.bind(this)
+
+    const modalToOpen = this.element.dataset.modalToOpen
+    if (modalToOpen) {
+      const modal = this.targets.find(modalToOpen)
+      if (modal) {
+        modal.classList.add("modal--open")
+        document.body.style.overflow = 'hidden'
+        document.addEventListener("keydown", this.boundCloseOnEscape)
+        modal.addEventListener("click", this.boundCloseOnBackdrop)
+      }
+    }
   }
 
   open(event) {

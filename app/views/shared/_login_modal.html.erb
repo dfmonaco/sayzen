@@ -1,4 +1,4 @@
-<div class="modal" id="loginModal" data-modal-target="loginModal">
+<div class="modal<%= ' modal--open' if local_assigns.fetch(:open, false) %>" id="loginModal" data-modal-target="loginModal">
   <div class="modal__content">
     <div class="modal__header">
       <h3 class="modal__title">Log In to SayZen</h3>
@@ -7,7 +7,7 @@
       </button>
     </div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form" }) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+      <%= render "devise/shared/login_form_errors", resource: resource %>
       <div class="form__group">
         <%= f.label :email, "Email Address", class: "form__label" %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form__input", placeholder: "you@example.com" %>
