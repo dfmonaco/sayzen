@@ -6,16 +6,16 @@
         <svg class="modal__close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
       </button>
     </div>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form" }) do |f| %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form", id: "login_form" }) do |f| %>
       <%= render "devise/shared/login_form_errors", resource: resource %>
       <div class="form__group">
         <%= f.label :email, "Email Address", class: "form__label" %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form__input", placeholder: "you@example.com" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form__input", placeholder: "you@example.com", id: "login_user_email" %>
       </div>
 
       <div class="form__group">
         <%= f.label :password, class: "form__label" %>
-        <%= f.password_field :password, autocomplete: "current-password", class: "form__input", placeholder: "••••••••" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form__input", placeholder: "••••••••", id: "login_user_password" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
