@@ -68,9 +68,9 @@ class LandingPageTest < ApplicationSystemTestCase
     within "#signupModal" do
       fill_in "First Name", with: "New"
       fill_in "Last Name", with: "User"
-      fill_in "Email Address", with: "new@example.com"
-      fill_in "Password", with: "password"
-      fill_in "Password confirmation", with: "password"
+      fill_in "signup_user_email", with: "new@example.com"
+      fill_in "signup_user_password", with: "password"
+      fill_in "signup_user_password_confirmation", with: "password"
       click_on "Sign up"
     end
 
@@ -85,9 +85,9 @@ class LandingPageTest < ApplicationSystemTestCase
     within "#signupModal" do
       fill_in "First Name", with: "Test"
       fill_in "Last Name", with: "User"
-      fill_in "Email Address", with: "test@example.com"
-      fill_in "Password", with: "password"
-      fill_in "Password confirmation", with: "wrong_password"
+      fill_in "signup_user_email", with: "test@example.com"
+      fill_in "signup_user_password", with: "password"
+      fill_in "signup_user_password_confirmation", with: "wrong_password"
       click_on "Sign up"
     end
 
@@ -100,8 +100,8 @@ class LandingPageTest < ApplicationSystemTestCase
     click_on "Log In"
 
     within "#loginModal" do
-      fill_in "Email Address", with: @user.email
-      fill_in "Password", with: "password"
+      fill_in "login_user_email", with: @user.email
+      fill_in "login_user_password", with: "password"
       click_on "Log In"
     end
 
@@ -114,8 +114,8 @@ class LandingPageTest < ApplicationSystemTestCase
     click_on "Log In"
 
     within "#loginModal" do
-      fill_in "Email Address", with: @user.email
-      fill_in "Password", with: "wrong_password"
+      fill_in "login_user_email", with: @user.email
+      fill_in "login_user_password", with: "wrong_password"
       click_on "Log In"
     end
 
@@ -132,8 +132,8 @@ class LandingPageTest < ApplicationSystemTestCase
 
     click_on "Log In"
     within "#loginModal" do
-      fill_in "Email Address", with: @user.email
-      fill_in "Password", with: "password"
+      fill_in "login_user_email", with: @user.email
+      fill_in "login_user_password", with: "password"
       click_on "Log In"
     end
 
