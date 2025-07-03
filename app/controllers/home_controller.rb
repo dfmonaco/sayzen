@@ -2,13 +2,7 @@ class HomeController < ApplicationController
   helper_method :resource_name, :resource, :devise_mapping, :resource_class
 
   def index
-    if resource.errors.any?
-      if params[:user] && params[:user][:password_confirmation].present?
-        @modal_to_open = "signupModal"
-      else
-        @modal_to_open = "loginModal"
-      end
-    end
+    
   end
 
   def resource_name
