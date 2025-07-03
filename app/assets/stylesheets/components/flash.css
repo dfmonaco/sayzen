@@ -1,0 +1,24 @@
+/* app/assets/stylesheets/components/flash.css */
+
+.flash {
+  padding: theme('spacing.3') theme('spacing.4');
+  margin-bottom: theme('spacing.4');
+  border-radius: theme('borderRadius.md');
+  font-size: theme('fontSize.sm');
+  font-weight: theme('fontWeight.medium');
+  text-align: center;
+  opacity: 0.95;
+  transition: opacity 300ms ease-in-out;
+}
+
+.flash--notice {
+  background-color: theme('colors.green.100');
+  color: theme('colors.green.800');
+  border: 1px solid theme('colors.green.300');
+}
+
+.flash--alert {
+  background-color: theme('colors.red.100');
+  color: theme('colors.red.800');
+  border: 1px solid theme('colors.red.300');
+}
