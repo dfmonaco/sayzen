@@ -103,16 +103,3 @@
   <%= render "shared/modals" %>
 </div>
 
-<% if @modal_to_open %>
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-      const modal = document.getElementById('<%= @modal_to_open %>');
-      if (modal) {
-        modal.classList.add('modal--open');
-        document.body.style.overflow = 'hidden';
-      }
-    });
-  </script>
-<% end %>
-</div>
-
