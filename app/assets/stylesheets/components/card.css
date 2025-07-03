@@ -89,7 +89,7 @@
   width: fit-content;
   padding: theme('spacing.3');
   border-radius: theme('borderRadius.full');
-  background-color: rgba(90, 111, 95, 0.1); /* primary-color with opacity */
+  background-color: rgba(var(--primary-color-rgb), 0.1);
   color: var(--primary-color);
 }
 
@@ -248,7 +248,7 @@
   margin-right: auto;
   margin-bottom: theme('spacing.10');
   font-size: theme('fontSize.lg');
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(var(--white-rgb), 0.9);
 }
 
 @media (min-width: theme('screens.md')) {

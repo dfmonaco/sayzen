@@ -4,7 +4,7 @@
   position: relative;
   padding-top: theme('spacing.20');
   padding-bottom: theme('spacing.20');
-  background-image: linear-gradient(to bottom right, rgba(90, 111, 95, 0.1), #F5F5F0, rgba(75, 92, 78, 0.2));
+  background-image: linear-gradient(to bottom right, rgba(var(--primary-color-rgb), 0.1), var(--background-light), rgba(var(--gradient-end-rgb), 0.2));
   text-align: center;
 }
 

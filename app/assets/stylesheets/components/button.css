@@ -30,7 +30,7 @@
 }
 
 .btn--secondary:hover {
-  background-color: rgba(90, 111, 95, 0.1); /* primary-color with opacity */
+  background-color: rgba(var(--primary-color-rgb), 0.1);
 }
 
 .btn--h-10 {
@@ -76,7 +76,7 @@
   position: absolute;
   inset: 0;
   width: 0;
-  background-color: rgba(90, 111, 95, 0.2); /* primary-color with opacity */
+  background-color: rgba(var(--primary-color-rgb), 0.2);
   transition: width 350ms ease-out;
 }
 

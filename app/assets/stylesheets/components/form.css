@@ -12,8 +12,11 @@
   gap: theme('spacing.2');
 }
 
-.form__group--submit {
-  margin-top: theme('spacing.2');
+.form__group--checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: theme('spacing.2');
 }
 
 .form__label {

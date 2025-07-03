@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: theme('spacing.4');
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(var(--black-rgb), 0.5);
   backdrop-filter: blur(theme('blur.sm'));
   z-index: 999;
   opacity: 0;
