@@ -19,7 +19,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       set_minimum_password_length
       respond_to do |format|
         format.turbo_stream { render turbo_stream: turbo_stream.replace("signupModal", partial: "shared/signup_modal", locals: { resource: resource, open: true }) }
-        format.html { render :new }
+        format.html { render :new, status: :unprocessable_entity }
       end
     end
   end

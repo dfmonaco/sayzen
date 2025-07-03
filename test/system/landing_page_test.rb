@@ -75,6 +75,7 @@ class LandingPageTest < ApplicationSystemTestCase
     end
 
     assert_text "Welcome! You have signed up successfully."
+    assert_current_path dashboard_index_path
   end
 
   test "unsuccessful sign up" do
@@ -105,6 +106,7 @@ class LandingPageTest < ApplicationSystemTestCase
     end
 
     assert_text "Signed in successfully."
+    assert_current_path dashboard_index_path
   end
 
   test "unsuccessful sign in" do
@@ -136,7 +138,7 @@ class LandingPageTest < ApplicationSystemTestCase
     end
 
     assert_text "Signed in successfully."
-    assert_no_selector "#loginModal.modal--open"
+    assert_current_path dashboard_index_path
     assert_no_text "Log In"
     assert_no_text "Get Started"
     assert_text "Dashboard"
