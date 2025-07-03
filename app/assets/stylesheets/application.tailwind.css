@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #5A6F5F;
+  --color-secondary: #3E2C2C;
+  --color-accent: #D4AF37;
+  --color-text-light: #7C7C7C;
+  --color-text-dark: #3E2C2C;
+  --color-background-light: #F5F5F0;
+  --color-background-dark: #EAE8E1;
+  --color-gradient-start: #5A6F5F;
+  --color-gradient-end: #4B5C4E;
+
+  --font-family-sans: ["Figtree", "sans-serif"];
+  --font-family-serif: ["Merriweather", "serif"];
+  --font-family-mono: ["Fira Code", "monospace"];
+}
+
+@import "./components/layout.css";
+@import "./components/navigation.css";
+@import "./components/button.css";
+@import "./components/form.css";
+@import "./components/card.css";
+@import "./components/hero.css";
+@import "./components/modal.css";
+@import "./components/flash.css";

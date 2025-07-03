@@ -1,0 +1,85 @@
+/* app/assets/stylesheets/components/hero.css */
+
+.hero {
+  position: relative;
+  padding-top: theme('spacing.20');
+  padding-bottom: theme('spacing.20');
+  background-image: linear-gradient(to bottom right, theme('color.primary / 10%'), theme('color.background-light'), theme('color.gradient-end / 20%'));
+  text-align: center;
+}
+
+@media (min-width: theme('screens.md')) {
+  .hero {
+    padding-top: theme('spacing.32');
+    padding-bottom: theme('spacing.32');
+  }
+}
+
+@media (min-width: theme('screens.lg')) {
+  .hero {
+    padding-top: theme('spacing.40');
+    padding-bottom: theme('spacing.40');
+  }
+}
+
+.hero__title {
+  margin-bottom: theme('spacing.6');
+  font-size: theme('fontSize.4xl');
+  font-weight: theme('fontWeight.extrabold');
+  letter-spacing: theme('letterSpacing.tighter');
+  color: theme('color.secondary');
+}
+
+@media (min-width: theme('screens.sm')) {
+  .hero__title {
+    font-size: theme('fontSize.5xl');
+  }
+}
+
+@media (min-width: theme('screens.md')) {
+  .hero__title {
+    font-size: theme('fontSize.6xl');
+  }
+}
+
+@media (min-width: theme('screens.lg')) {
+  .hero__title {
+    font-size: theme('fontSize.7xl');
+  }
+}
+
+.hero__title-highlight {
+  background-image: linear-gradient(to right, theme('color.gradient-start'), theme('color.accent'));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__description {
+  max-width: theme('maxWidth.xl');
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: theme('spacing.10');
+  font-size: theme('fontSize.lg');
+  color: theme('color.text-light');
+}
+
+@media (min-width: theme('screens.md')) {
+  .hero__description {
+    max-width: theme('maxWidth.2xl');
+    font-size: theme('fontSize.xl');
+  }
+}
+
+.hero__image-container {
+  margin-top: theme('spacing.16');
+}
+
+.hero__image {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: theme('borderRadius.xl');
+  box-shadow: theme('boxShadow.2xl');
+  width: 100%;
+  max-width: theme('maxWidth.3xl');
+}

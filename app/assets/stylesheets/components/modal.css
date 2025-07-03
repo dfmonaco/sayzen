@@ -1,0 +1,69 @@
+/* app/assets/stylesheets/components/modal.css */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: theme('spacing.4');
+  background-color: theme('color.black / 50%');
+  backdrop-filter: blur(theme('blur.sm'));
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in-out;
+}
+
+.modal--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal__content {
+  width: 100%;
+  max-width: theme('maxWidth.md');
+  padding: theme('spacing.6');
+  border-radius: theme('borderRadius.xl');
+  background-color: theme('color.background-light');
+  box-shadow: theme('boxShadow.2xl');
+  transform: scale(0.95);
+  transition: transform 300ms ease-in-out;
+}
+
+@media (min-width: theme('screens.md')) {
+  .modal__content {
+    padding: theme('spacing.8');
+  }
+}
+
+.modal--open .modal__content {
+  transform: scale(1);
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: theme('spacing.6');
+}
+
+.modal__title {
+  font-size: theme('fontSize.2xl');
+  font-weight: theme('fontWeight.semibold');
+  color: theme('color.secondary');
+}
+
+.modal__close-button {
+  color: theme('color.text-light');
+  transition: color 150ms ease-in-out;
+}
+
+.modal__close-button:hover {
+  color: theme('color.secondary');
+}
+
+.modal__close-icon {
+  width: theme('spacing.6');
+  height: theme('spacing.6');
+}

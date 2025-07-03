@@ -1,0 +1,90 @@
+/* app/assets/stylesheets/components/button.css */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: theme('borderRadius.lg');
+  font-size: theme('fontSize.sm');
+  font-weight: theme('fontWeight.semibold');
+  line-height: theme('lineHeight.normal');
+  letter-spacing: theme('letterSpacing.wide');
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: theme('color.primary');
+  color: white;
+  box-shadow: theme('boxShadow.md');
+}
+
+.btn--primary:hover {
+  background-color: theme('color.gradient-end');
+  box-shadow: theme('boxShadow.lg');
+  transform: translateY(-theme('spacing.px'));
+}
+
+.btn--secondary {
+  color: theme('color.primary');
+}
+
+.btn--secondary:hover {
+  background-color: theme('color.primary / 10%');
+}
+
+.btn--sm {
+  height: theme('spacing.10');
+  padding-left: theme('spacing.4');
+  padding-right: theme('spacing.4');
+}
+
+.btn--md {
+  height: theme('spacing.11');
+  width: 100%;
+}
+
+.btn--lg {
+  height: theme('spacing.12');
+  width: theme('spacing.48');
+  font-size: theme('fontSize.lg');
+  box-shadow: theme('boxShadow.lg');
+}
+
+.btn--lg:hover {
+  box-shadow: theme('boxShadow.xl');
+  transform: scale(1.05);
+}
+
+.btn--cta {
+  background-color: theme('color.background-light');
+  color: theme('color.primary');
+  position: relative;
+  overflow: hidden;
+  height: theme('spacing.12');
+  width: theme('spacing.56');
+  font-size: theme('fontSize.lg');
+  box-shadow: theme('boxShadow.lg');
+}
+
+.btn--cta:hover {
+  box-shadow: theme('boxShadow.xl');
+  transform: scale(1.05);
+}
+
+.btn--cta .btn__hover-overlay {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  background-color: theme('color.primary / 20%');
+  transition: width 350ms ease-out;
+}
+
+.btn--cta:hover .btn__hover-overlay {
+  width: 100%;
+}
+
+.btn__text {
+  position: relative;
+  truncate: true;
+}

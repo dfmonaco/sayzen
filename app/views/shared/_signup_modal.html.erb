@@ -1,0 +1,48 @@
+<div class="modal<%= ' modal--open' if local_assigns.fetch(:open, false) %>" id="signupModal">
+  <div class="modal__content">
+    <div class="modal__header">
+      <h3 class="modal__title">Create Your SayZen Account</h3>
+      <button class="modal__close-button" id="closeSignupModal" data-action="click->modal#close">
+        <svg class="modal__close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+      </button>
+    </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "form", id: "signup_form" }) do |f| %>
+      <%= render "devise/shared/signup_form_errors", resource: resource %>
+
+      <div class="form__group">
+        <%= f.label :first_name, class: "form__label" %>
+        <%= f.text_field :first_name, autofocus: true, class: "form__input", placeholder: "First Name" %>
+      </div>
+
+      <div class="form__group">
+        <%= f.label :last_name, class: "form__label" %>
+        <%= f.text_field :last_name, class: "form__input", placeholder: "Last Name" %>
+      </div>
+
+      <div class="form__group">
+        <%= f.label :email, "Email Address", class: "form__label" %>
+        <%= f.email_field :email, autocomplete: "email", class: "form__input", placeholder: "you@example.com", id: "signup_user_email" %>
+      </div>
+
+      <div class="form__group">
+        <%= f.label :password, class: "form__label" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "form__input", placeholder: "Create a strong password", id: "signup_user_password" %>
+      </div>
+
+      <div class="form__group">
+        <%= f.label :password_confirmation, class: "form__label" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form__input", id: "signup_user_password_confirmation" %>
+      </div>
+
+      <div class="form__group form__group--submit">
+        <%= f.submit "Sign up", class: "btn btn--primary btn--md" %>
+      </div>
+    <% end %>
+    <p class="form__footer-text">
+      Already have an account? <button class="form__footer-link" data-action="click->modal#switch" data-switch-target="loginModal">Log in</button>
+    </p>
+  </div>
+</div>
