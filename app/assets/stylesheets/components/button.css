@@ -33,25 +33,25 @@
   background-color: theme('color.primary / 10%');
 }
 
-.btn--h-10 {
+.btn--sm {
   height: theme('spacing.10');
   padding-left: theme('spacing.4');
   padding-right: theme('spacing.4');
 }
 
-.btn--h-11 {
+.btn--md {
   height: theme('spacing.11');
   width: 100%;
 }
 
-.btn--h-12 {
+.btn--lg {
   height: theme('spacing.12');
   width: theme('spacing.48');
   font-size: theme('fontSize.lg');
   box-shadow: theme('boxShadow.lg');
 }
 
-.btn--h-12:hover {
+.btn--lg:hover {
   box-shadow: theme('boxShadow.xl');
   transform: scale(1.05);
 }
