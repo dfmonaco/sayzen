@@ -14,23 +14,23 @@
 }
 
 .btn--primary {
-  background-color: var(--primary-color);
+  background-color: theme('color.primary');
   color: white;
   box-shadow: theme('boxShadow.md');
 }
 
 .btn--primary:hover {
-  background-color: var(--gradient-end);
+  background-color: theme('color.gradient-end');
   box-shadow: theme('boxShadow.lg');
   transform: translateY(-theme('spacing.px'));
 }
 
 .btn--secondary {
-  color: var(--primary-color);
+  color: theme('color.primary');
 }
 
 .btn--secondary:hover {
-  background-color: rgba(var(--primary-color-rgb), 0.1);
+  background-color: theme('color.primary / 10%');
 }
 
 .btn--h-10 {
@@ -57,8 +57,8 @@
 }
 
 .btn--cta {
-  background-color: var(--background-light);
-  color: var(--primary-color);
+  background-color: theme('color.background-light');
+  color: theme('color.primary');
   position: relative;
   overflow: hidden;
   height: theme('spacing.12');
@@ -76,7 +76,7 @@
   position: absolute;
   inset: 0;
   width: 0;
-  background-color: rgba(var(--primary-color-rgb), 0.2);
+  background-color: theme('color.primary / 20%');
   transition: width 350ms ease-out;
 }
 

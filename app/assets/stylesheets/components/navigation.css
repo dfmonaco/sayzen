@@ -9,8 +9,8 @@
   justify-content: space-between;
   white-space: nowrap;
   border-bottom-width: 1px;
-  border-color: var(--background-dark);
-  background-color: rgba(var(--background-light-rgb), 0.8);
+  border-color: theme('color.background-dark');
+  background-color: theme('color.background-light / 80%');
   backdrop-filter: blur(theme('blur.md'));
   padding: theme('spacing.4') theme('spacing.6');
   transition: all 300ms ease-in-out;
@@ -27,20 +27,20 @@
   display: flex;
   align-items: center;
   gap: theme('spacing.3');
-  color: var(--secondary-color);
+  color: theme('color.secondary');
 }
 
 .header__logo-icon {
   height: theme('spacing.8');
   width: theme('spacing.8');
-  color: var(--primary-color);
+  color: theme('color.primary');
 }
 
 .header__logo-text {
   font-size: theme('fontSize.2xl');
   font-weight: theme('fontWeight.bold');
   letter-spacing: theme('letterSpacing.tight');
-  color: var(--secondary-color);
+  color: theme('color.secondary');
 }
 
 .header__nav {
@@ -64,12 +64,12 @@
 .header__nav-link {
   font-size: theme('fontSize.sm');
   font-weight: theme('fontWeight.medium');
-  color: var(--text-dark);
+  color: theme('color.text-dark');
   transition: color 300ms ease-in-out;
 }
 
 .header__nav-link:hover {
-  color: var(--primary-color);
+  color: theme('color.primary');
 }
 
 .header__actions {
@@ -81,11 +81,11 @@
 .header__mobile-menu-button {
   padding: theme('spacing.2');
   border-radius: theme('borderRadius.md');
-  color: var(--secondary-color);
+  color: theme('color.secondary');
 }
 
 .header__mobile-menu-button:hover {
-  background-color: var(--background-dark);
+  background-color: theme('color.background-dark');
 }
 
 @media (min-width: theme('screens.md')) {
@@ -95,8 +95,8 @@
 }
 
 .footer {
-  background-color: var(--secondary-color);
-  color: rgba(var(--white-rgb), 0.8);
+  background-color: theme('color.secondary');
+  color: theme('color.white / 80%');
   padding-top: theme('spacing.12');
   padding-bottom: theme('spacing.12');
 }
@@ -134,7 +134,7 @@
 .footer__logo-icon {
   height: theme('spacing.8');
   width: theme('spacing.8');
-  color: var(--primary-color);
+  color: theme('color.primary');
 }
 
 .footer__logo-text {
@@ -168,12 +168,12 @@
 }
 
 .footer__link:hover {
-  color: var(--primary-color);
+  color: theme('color.primary');
 }
 
 .footer__copyright {
   border-top-width: 1px;
-  border-color: rgba(var(--white-rgb), 0.2);
+  border-color: theme('color.white / 20%');
   padding-top: theme('spacing.8');
   text-align: center;
   font-size: theme('fontSize.sm');

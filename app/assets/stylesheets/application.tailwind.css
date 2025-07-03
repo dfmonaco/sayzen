@@ -1,20 +1,19 @@
 @import "tailwindcss";
 
-:root {
-  --primary-color: #5A6F5F;
-  --primary-color-rgb: 90, 111, 95;
-  --secondary-color: #3E2C2C;
-  --accent-color: #D4AF37;
-  --text-light: #7C7C7C;
-  --text-dark: #3E2C2C;
-  --background-light: #F5F5F0;
-  --background-light-rgb: 245, 245, 240;
-  --background-dark: #EAE8E1;
-  --gradient-start: #5A6F5F;
-  --gradient-end: #4B5C4E;
-  --gradient-end-rgb: 75, 92, 78;
-  --white-rgb: 255, 255, 255;
-  --black-rgb: 0, 0, 0;
+@theme {
+  --color-primary: #5A6F5F;
+  --color-secondary: #3E2C2C;
+  --color-accent: #D4AF37;
+  --color-text-light: #7C7C7C;
+  --color-text-dark: #3E2C2C;
+  --color-background-light: #F5F5F0;
+  --color-background-dark: #EAE8E1;
+  --color-gradient-start: #5A6F5F;
+  --color-gradient-end: #4B5C4E;
+
+  --font-family-sans: ["Figtree", "sans-serif"];
+  --font-family-serif: ["Merriweather", "serif"];
+  --font-family-mono: ["Fira Code", "monospace"];
 }
 
 @import "./components/layout.css";

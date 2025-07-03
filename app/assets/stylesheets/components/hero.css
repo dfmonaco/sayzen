@@ -4,7 +4,7 @@
   position: relative;
   padding-top: theme('spacing.20');
   padding-bottom: theme('spacing.20');
-  background-image: linear-gradient(to bottom right, rgba(var(--primary-color-rgb), 0.1), var(--background-light), rgba(var(--gradient-end-rgb), 0.2));
+  background-image: linear-gradient(to bottom right, theme('color.primary / 10%'), theme('color.background-light'), theme('color.gradient-end / 20%'));
   text-align: center;
 }
 
@@ -27,7 +27,7 @@
   font-size: theme('fontSize.4xl');
   font-weight: theme('fontWeight.extrabold');
   letter-spacing: theme('letterSpacing.tighter');
-  color: var(--secondary-color);
+  color: theme('color.secondary');
 }
 
 @media (min-width: theme('screens.sm')) {
@@ -49,7 +49,7 @@
 }
 
 .hero__title-highlight {
-  background-image: linear-gradient(to right, var(--gradient-start), var(--accent-color));
+  background-image: linear-gradient(to right, theme('color.gradient-start'), theme('color.accent'));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -61,7 +61,7 @@
   margin-right: auto;
   margin-bottom: theme('spacing.10');
   font-size: theme('fontSize.lg');
-  color: var(--text-light);
+  color: theme('color.text-light');
 }
 
 @media (min-width: theme('screens.md')) {

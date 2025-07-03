@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: theme('spacing.4');
-  background-color: rgba(var(--black-rgb), 0.5);
+  background-color: theme('color.black / 50%');
   backdrop-filter: blur(theme('blur.sm'));
   z-index: 999;
   opacity: 0;
@@ -25,7 +25,7 @@
   max-width: theme('maxWidth.md');
   padding: theme('spacing.6');
   border-radius: theme('borderRadius.xl');
-  background-color: var(--background-light);
+  background-color: theme('color.background-light');
   box-shadow: theme('boxShadow.2xl');
   transform: scale(0.95);
   transition: transform 300ms ease-in-out;
@@ -51,16 +51,16 @@
 .modal__title {
   font-size: theme('fontSize.2xl');
   font-weight: theme('fontWeight.semibold');
-  color: var(--secondary-color);
+  color: theme('color.secondary');
 }
 
 .modal__close-button {
-  color: var(--text-light);
+  color: theme('color.text-light');
   transition: color 150ms ease-in-out;
 }
 
 .modal__close-button:hover {
-  color: var(--secondary-color);
+  color: theme('color.secondary');
 }
 
 .modal__close-icon {
