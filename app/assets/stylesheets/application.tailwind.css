@@ -87,6 +87,13 @@
   --max-width-2xl: theme('maxWidth.2xl');
   --max-width-3xl: theme('maxWidth.3xl');
   --max-width-md: theme('maxWidth.md');
+
+  --color-green-100: theme('colors.green.100');
+  --color-green-800: theme('colors.green.800');
+  --color-green-300: theme('colors.green.300');
+  --color-red-100: theme('colors.red.100');
+  --color-red-800: theme('colors.red.800');
+  --color-red-300: theme('colors.red.300');
 }
 
 @import "./components/layout.css";
