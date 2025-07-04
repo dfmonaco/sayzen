@@ -248,7 +248,7 @@
   margin-right: auto;
   margin-bottom: theme('spacing.10');
   font-size: theme('fontSize.lg');
-  color: theme('color.white / 90%');
+  color: var(--color-white-80);
 }
 
 @media (min-width: theme('screens.md')) {
