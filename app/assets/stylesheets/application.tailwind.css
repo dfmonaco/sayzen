@@ -23,6 +23,12 @@
   --font-family-sans: ["Figtree", "sans-serif"];
   --font-family-serif: ["Merriweather", "serif"];
   --font-family-mono: ["Fira Code", "monospace"];
+
+  --spacing-6: theme('spacing.6');
+  --screen-sm: theme('screens.sm');
+  --screen-md: theme('screens.md');
+  --screen-lg: theme('screens.lg');
+  --screen-xl: theme('screens.xl');
 }
 
 @import "./components/layout.css";

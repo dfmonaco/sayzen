@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: theme('color.background-light');
-  font-family: theme('fontFamily.sans');
+  background-color: var(--color-background-light);
+  font-family: var(--font-family-sans);
   overflow-x: hidden;
 }
 
@@ -13,27 +13,27 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: theme('spacing.6');
-  padding-right: theme('spacing.6');
+  padding-left: var(--spacing-6);
+  padding-right: var(--spacing-6);
 }
 
-@media (min-width: theme('screens.sm')) {
+@media (min-width: var(--screen-sm)) {
   .container {
-    max-width: theme('screens.sm');
+    max-width: var(--screen-sm);
   }
 }
-@media (min-width: theme('screens.md')) {
+@media (min-width: var(--screen-md)) {
   .container {
-    max-width: theme('screens.md');
+    max-width: var(--screen-md);
   }
 }
-@media (min-width: theme('screens.lg')) {
+@media (min-width: var(--screen-lg)) {
   .container {
-    max-width: theme('screens.lg');
+    max-width: var(--screen-lg);
   }
 }
-@media (min-width: theme('screens.xl')) {
+@media (min-width: var(--screen-xl)) {
   .container {
-    max-width: theme('screens.xl');
+    max-width: var(--screen-xl);
   }
 }
