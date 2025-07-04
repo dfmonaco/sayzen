@@ -34,6 +34,8 @@
   --spacing-11: theme('spacing.11');
   --spacing-12: theme('spacing.12');
   --spacing-16: theme('spacing.16');
+  --spacing-20: theme('spacing.20');
+  --spacing-24: theme('spacing.24');
   --spacing-48: theme('spacing.48');
   --spacing-56: theme('spacing.56');
   --spacing-px: theme('spacing.px');
@@ -48,6 +50,9 @@
   --font-size-xl: theme('fontSize.xl');
   --font-size-2xl: theme('fontSize.2xl');
   --font-size-lg: theme('fontSize.lg');
+  --font-size-3xl: theme('fontSize.3xl');
+  --font-size-4xl: theme('fontSize.4xl');
+  --font-size-base: theme('fontSize.base');
   --font-weight-bold: theme('fontWeight.bold');
   --font-weight-medium: theme('fontWeight.medium');
   --font-weight-semibold: theme('fontWeight.semibold');
@@ -55,14 +60,21 @@
   --letter-spacing-wide: theme('letterSpacing.wide');
   --border-radius-md: theme('borderRadius.md');
   --border-radius-lg: theme('borderRadius.lg');
+  --border-radius-xl: theme('borderRadius.xl');
+  --border-radius-full: theme('borderRadius.full');
   --color-white-80: theme('color.white / 80%');
   --color-white-20: theme('color.white / 20%');
+  --color-white-90: theme('color.white / 90%');
   --box-shadow-md: theme('boxShadow.md');
   --box-shadow-lg: theme('boxShadow.lg');
   --box-shadow-xl: theme('boxShadow.xl');
+  --box-shadow-2xl: theme('boxShadow.2xl');
   --line-height-normal: theme('lineHeight.normal');
+  --line-height-relaxed: theme('lineHeight.relaxed');
   --color-primary-10: theme('color.primary / 10%');
   --color-primary-20: theme('color.primary / 20%');
+  --max-width-xl: theme('maxWidth.xl');
+  --max-width-2xl: theme('maxWidth.2xl');
 }
 
 @import "./components/layout.css";
