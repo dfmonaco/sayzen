@@ -30,8 +30,12 @@
   --spacing-6: theme('spacing.6');
   --spacing-8: theme('spacing.8');
   --spacing-10: theme('spacing.10');
+  --spacing-11: theme('spacing.11');
   --spacing-12: theme('spacing.12');
   --spacing-16: theme('spacing.16');
+  --spacing-48: theme('spacing.48');
+  --spacing-56: theme('spacing.56');
+  --spacing-px: theme('spacing.px');
 
   --screen-sm: theme('screens.sm');
   --screen-md: theme('screens.md');
@@ -42,13 +46,22 @@
   --font-size-sm: theme('fontSize.sm');
   --font-size-xl: theme('fontSize.xl');
   --font-size-2xl: theme('fontSize.2xl');
+  --font-size-lg: theme('fontSize.lg');
   --font-weight-bold: theme('fontWeight.bold');
   --font-weight-medium: theme('fontWeight.medium');
   --font-weight-semibold: theme('fontWeight.semibold');
   --letter-spacing-tight: theme('letterSpacing.tight');
+  --letter-spacing-wide: theme('letterSpacing.wide');
   --border-radius-md: theme('borderRadius.md');
+  --border-radius-lg: theme('borderRadius.lg');
   --color-white-80: theme('color.white / 80%');
   --color-white-20: theme('color.white / 20%');
+  --box-shadow-md: theme('boxShadow.md');
+  --box-shadow-lg: theme('boxShadow.lg');
+  --box-shadow-xl: theme('boxShadow.xl');
+  --line-height-normal: theme('lineHeight.normal');
+  --color-primary-10: theme('color.primary / 10%');
+  --color-primary-20: theme('color.primary / 20%');
 }
 
 @import "./components/layout.css";
