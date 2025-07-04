@@ -24,11 +24,31 @@
   --font-family-serif: ["Merriweather", "serif"];
   --font-family-mono: ["Fira Code", "monospace"];
 
+  --spacing-2: theme('spacing.2');
+  --spacing-3: theme('spacing.3');
+  --spacing-4: theme('spacing.4');
   --spacing-6: theme('spacing.6');
+  --spacing-8: theme('spacing.8');
+  --spacing-10: theme('spacing.10');
+  --spacing-12: theme('spacing.12');
+  --spacing-16: theme('spacing.16');
+
   --screen-sm: theme('screens.sm');
   --screen-md: theme('screens.md');
   --screen-lg: theme('screens.lg');
   --screen-xl: theme('screens.xl');
+
+  --blur-md: theme('blur.md');
+  --font-size-sm: theme('fontSize.sm');
+  --font-size-xl: theme('fontSize.xl');
+  --font-size-2xl: theme('fontSize.2xl');
+  --font-weight-bold: theme('fontWeight.bold');
+  --font-weight-medium: theme('fontWeight.medium');
+  --font-weight-semibold: theme('fontWeight.semibold');
+  --letter-spacing-tight: theme('letterSpacing.tight');
+  --border-radius-md: theme('borderRadius.md');
+  --color-white-80: theme('color.white / 80%');
+  --color-white-20: theme('color.white / 20%');
 }
 
 @import "./components/layout.css";
