@@ -94,6 +94,23 @@
   --color-red-100: theme('colors.red.100');
   --color-red-800: theme('colors.red.800');
   --color-red-300: theme('colors.red.300');
+
+  --color-stone-50: theme('colors.stone.50');
+  --color-stone-950-10: theme('colors.stone.950 / 10%');
+  --color-gray-100: theme('colors.gray.100');
+  --color-gray-500: theme('colors.gray.500');
+  --color-gray-50: theme('colors.gray.50');
+  --color-gray-200: theme('colors.gray.200');
+  --color-gray-800: theme('colors.gray.800');
+  --color-stone-950-15: theme('colors.stone.950 / 15%');
+  --color-indigo-500: theme('colors.indigo.500');
+  --color-red-500-15: theme('colors.red.500 / 15%');
+  --color-indigo-500-15: theme('colors.indigo.500 / 15%');
+  --color-gray-400: theme('colors.gray.400');
+  --color-red-500-30: theme('colors.red.500 / 30%');
+  --color-red-600: theme('colors.red.600');
+  --color-green-500: theme('colors.green.500');
+  --color-green-500-30: theme('colors.green.500 / 30%');
 }
 
 @import "./components/layout.css";
