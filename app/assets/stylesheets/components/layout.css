@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: theme('color.background-light');
-  font-family: theme('fontFamily.sans');
+  background-color: #F5F5F0;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   overflow-x: hidden;
 }
 
@@ -13,27 +13,27 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: theme('spacing.6');
-  padding-right: theme('spacing.6');
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-@media (min-width: theme('screens.sm')) {
+@media (min-width: 40rem) {
   .container {
-    max-width: theme('screens.sm');
+    max-width: 40rem;
   }
 }
-@media (min-width: theme('screens.md')) {
+@media (min-width: 48rem) {
   .container {
-    max-width: theme('screens.md');
+    max-width: 48rem;
   }
 }
-@media (min-width: theme('screens.lg')) {
+@media (min-width: 64rem) {
   .container {
-    max-width: theme('screens.lg');
+    max-width: 64rem;
   }
 }
-@media (min-width: theme('screens.xl')) {
+@media (min-width: 80rem) {
   .container {
-    max-width: theme('screens.xl');
+    max-width: 80rem;
   }
 }
