@@ -24,6 +24,7 @@
   --font-family-serif: ["Merriweather", "serif"];
   --font-family-mono: ["Fira Code", "monospace"];
 
+  --spacing-1: theme('spacing.1');
   --spacing-2: theme('spacing.2');
   --spacing-3: theme('spacing.3');
   --spacing-4: theme('spacing.4');
