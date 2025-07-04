@@ -48,6 +48,7 @@
   --screen-xl: theme('screens.xl');
 
   --blur-md: theme('blur.md');
+  --blur-sm: theme('blur.sm');
   --font-size-sm: theme('fontSize.sm');
   --font-size-xl: theme('fontSize.xl');
   --font-size-2xl: theme('fontSize.2xl');
@@ -72,6 +73,7 @@
   --color-white-80: theme('color.white / 80%');
   --color-white-20: theme('color.white / 20%');
   --color-white-90: theme('color.white / 90%');
+  --color-black-50: theme('color.black / 50%');
   --box-shadow-md: theme('boxShadow.md');
   --box-shadow-lg: theme('boxShadow.lg');
   --box-shadow-xl: theme('boxShadow.xl');
@@ -84,6 +86,7 @@
   --max-width-xl: theme('maxWidth.xl');
   --max-width-2xl: theme('maxWidth.2xl');
   --max-width-3xl: theme('maxWidth.3xl');
+  --max-width-md: theme('maxWidth.md');
 }
 
 @import "./components/layout.css";
