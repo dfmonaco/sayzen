@@ -1,7 +1,7 @@
 .pronunciation-practice {
-    background: var(--color-stone-50);
+    background: var(--color-neutral-50);
     border-radius: 20px;
-    box-shadow: 0 20px 40px var(--color-stone-950-10);
+    box-shadow: 0 20px 40px var(--color-neutral-950-10);
     max-width: 480px;
     width: 100%;
     padding: 30px;
@@ -26,7 +26,7 @@
 
 .pronunciation-practice__progress-bar {
     height: 6px;
-    background: var(--color-gray-100);
+    background: var(--color-neutral-100);
     border-radius: 3px;
     margin-bottom: 20px;
     overflow: hidden;
@@ -44,22 +44,22 @@
     justify-content: space-between;
     margin-bottom: 20px;
     font-size: var(--font-size-sm);
-    color: var(--color-gray-500);
+    color: var(--color-neutral-500);
 }
 
 .pronunciation-practice__minimal-pair {
     text-align: center;
     margin-bottom: 30px;
     padding: 20px;
-    background: var(--color-gray-50);
+    background: var(--color-neutral-50);
     border-radius: 12px;
-    border: 2px solid var(--color-gray-200);
+    border: 2px solid var(--color-neutral-200);
 }
 
 .pronunciation-practice__pair-title {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
-    color: var(--color-gray-800);
+    color: var(--color-neutral-800);
     margin-bottom: 15px;
 }
 
@@ -72,10 +72,10 @@
 }
 
 .pronunciation-practice__word {
-    background: var(--color-stone-50);
+    background: var(--color-neutral-50);
     padding: 15px 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px var(--color-stone-950-10);
+    box-shadow: 0 4px 8px var(--color-neutral-950-10);
     cursor: pointer;
     transition: all 0.2s ease;
     border: 2px solid transparent;
@@ -83,13 +83,13 @@
 
 .pronunciation-practice__word:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px var(--color-stone-950-15);
-    border-color: var(--color-indigo-500);
+    box-shadow: 0 6px 12px var(--color-neutral-950-15);
+    border-color: var(--color-pronunciation-start);
 }
 
 .pronunciation-practice__word--playing {
-    background: var(--color-indigo-500);
-    color: var(--color-stone-50);
+    background: var(--color-pronunciation-start);
+    color: var(--color-neutral-50);
     animation: pulse 1.5s ease-in-out infinite;
 }
 
@@ -112,17 +112,17 @@
 
 .pronunciation-practice__letter-highlight--sound-a {
     color: var(--color-red-500);
-    background: var(--color-red-500-15);
+    background: var(--color-record-overlay-15);
 }
 
 .pronunciation-practice__letter-highlight--sound-b {
-    color: var(--color-indigo-500);
-    background: var(--color-indigo-500-15);
+    color: var(--color-pronunciation-start);
+    background: var(--color-pronunciation-overlay-15);
 }
 
 .pronunciation-practice__phonetic {
     font-size: var(--font-size-sm);
-    color: var(--color-gray-500);
+    color: var(--color-neutral-500);
     font-style: italic;
 }
 
@@ -139,13 +139,13 @@
 }
 
 .pronunciation-practice__sound-highlight--sound-b {
-    color: var(--color-indigo-500);
+    color: var(--color-pronunciation-start);
     background: var(--color-indigo-500-10);
 }
 
 .pronunciation-practice__vs {
     font-size: var(--font-size-lg);
-    color: var(--color-gray-400);
+    color: var(--color-neutral-400);
     font-weight: var(--font-weight-medium);
 }
 
@@ -161,13 +161,13 @@
 .pronunciation-practice__current-word {
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
-    color: var(--color-indigo-500);
+    color: var(--color-pronunciation-start);
     margin-bottom: 10px;
 }
 
 .pronunciation-practice__instruction {
     font-size: var(--font-size-base);
-    color: var(--color-gray-500);
+    color: var(--color-neutral-500);
     margin-bottom: 20px;
 }
 
@@ -177,7 +177,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, var(--color-gradient-record-start), var(--color-gradient-record-end));
     border: none;
-    color: var(--color-stone-50);
+    color: var(--color-neutral-50);
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-semibold);
     cursor: pointer;
@@ -186,7 +186,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
-    box-shadow: 0 4px 15px var(--color-red-500-30);
+    box-shadow: 0 4px 15px var(--color-record-overlay-30);
 }
 
 .pronunciation-practice__record-button:hover {
@@ -195,13 +195,13 @@
 }
 
 .pronunciation-practice__record-button--recording {
-    background: var(--color-red-600);
+    background: var(--color-record-end);
     animation: recording-pulse 1s ease-in-out infinite;
 }
 
 .pronunciation-practice__record-button--recorded {
-    background: var(--color-green-500);
-    box-shadow: 0 4px 15px var(--color-green-500-30);
+    background: var(--color-success-base);
+    box-shadow: 0 4px 15px var(--color-success-overlay-30);
 }
 
 @keyframes recording-pulse {
@@ -210,7 +210,7 @@
 }
 
 .pronunciation-practice__playback-section {
-    background: var(--color-gray-50);
+    background: var(--color-neutral-50);
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
@@ -226,7 +226,7 @@
     font-weight: var(--font-weight-semibold);
     margin-bottom: 15px;
     text-align: center;
-    color: var(--color-gray-800);
+    color: var(--color-neutral-800);
 }
 
 .pronunciation-practice__playback-sequence {
@@ -240,7 +240,7 @@
     text-align: center;
     flex: 1;
     padding: 10px;
-    background: var(--color-stone-50);
+    background: var(--color-neutral-50);
     border-radius: 8px;
     margin: 0 5px;
     transition: all 0.2s ease;
@@ -248,19 +248,19 @@
 }
 
 .pronunciation-practice__playback-item--playing {
-    background: var(--color-indigo-500);
-    color: var(--color-stone-50);
+    background: var(--color-pronunciation-start);
+    color: var(--color-neutral-50);
     transform: scale(1.05);
 }
 
 .pronunciation-practice__playback-label {
     font-size: var(--font-size-xs);
-    color: var(--color-gray-500);
+    color: var(--color-neutral-500);
     margin-bottom: 5px;
 }
 
 .pronunciation-practice__playback-item--playing .pronunciation-practice__playback-label {
-    color: var(--color-stone-50);
+    color: var(--color-neutral-50);
 }
 
 .pronunciation-practice__playback-text {
@@ -277,7 +277,7 @@
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
     margin-bottom: 15px;
-    color: var(--color-gray-800);
+    color: var(--color-neutral-800);
 }
 
 .pronunciation-practice__evaluation-buttons {
@@ -288,8 +288,8 @@
 
 .pronunciation-practice__eval-button {
     padding: 12px 20px;
-    border: 2px solid var(--color-gray-200);
-    background: var(--color-stone-50);
+    border: 2px solid var(--color-neutral-200);
+    background: var(--color-neutral-50);
     border-radius: 8px;
     cursor: pointer;
     font-weight: var(--font-weight-semibold);
@@ -302,17 +302,17 @@
 }
 
 .pronunciation-practice__eval-button--sounds-good {
-    color: var(--color-green-500);
-    border-color: var(--color-green-500);
+    color: var(--color-success-base);
+    border-color: var(--color-success-base);
 }
 
 .pronunciation-practice__eval-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px var(--color-stone-950-10);
+    box-shadow: 0 4px 8px var(--color-neutral-950-10);
 }
 
 .pronunciation-practice__eval-button--selected {
-    color: var(--color-stone-50);
+    color: var(--color-neutral-50);
 }
 
 .pronunciation-practice__eval-button--try-again.pronunciation-practice__eval-button--selected {
@@ -320,14 +320,14 @@
 }
 
 .pronunciation-practice__eval-button--sounds-good.pronunciation-practice__eval-button--selected {
-    background: var(--color-green-500);
+    background: var(--color-success-base);
 }
 
 .pronunciation-practice__next-button {
     width: 100%;
     padding: 15px;
     background: linear-gradient(135deg, var(--color-gradient-pronunciation-start), var(--color-gradient-pronunciation-end));
-    color: var(--color-stone-50);
+    color: var(--color-neutral-50);
     border: none;
     border-radius: 12px;
     font-size: var(--font-size-base);
@@ -350,29 +350,29 @@
 
 .pronunciation-practice__waveform {
     height: 40px;
-    background: var(--color-gray-100);
+    background: var(--color-neutral-100);
     border-radius: 8px;
     margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: var(--font-size-sm);
-    color: var(--color-gray-500);
+    color: var(--color-neutral-500);
 }
 
 .pronunciation-practice__waveform--active {
     background: linear-gradient(90deg, var(--color-gradient-pronunciation-start), var(--color-gradient-pronunciation-end));
-    color: var(--color-stone-50);
+    color: var(--color-neutral-50);
 }
 
 .pronunciation-practice__phase-indicator {
     font-size: var(--font-size-sm);
-    color: var(--color-gray-500);
+    color: var(--color-neutral-500);
     text-align: center;
     margin-bottom: 10px;
 }
 
 .pronunciation-practice__arrow {
     font-size: var(--font-size-lg);
-    color: var(--color-indigo-500);
+    color: var(--color-pronunciation-start);
 }

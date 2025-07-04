@@ -88,29 +88,28 @@
   --max-width-3xl: theme('maxWidth.3xl');
   --max-width-md: theme('maxWidth.md');
 
-  --color-green-100: theme('colors.green.100');
-  --color-green-800: theme('colors.green.800');
-  --color-green-300: theme('colors.green.300');
-  --color-red-100: theme('colors.red.100');
-  --color-red-800: theme('colors.red.800');
-  --color-red-300: theme('colors.red.300');
+  --color-success-light: theme('colors.green.100');
+  --color-success-dark: theme('colors.green.800');
+  --color-success-medium: theme('colors.green.300');
+  --color-error-light: theme('colors.red.100');
+  --color-error-dark: theme('colors.red.800');
+  --color-error-medium: theme('colors.red.300');
 
-  --color-stone-50: theme('colors.stone.50');
-  --color-stone-950-10: theme('colors.stone.950 / 10%');
-  --color-gray-100: theme('colors.gray.100');
-  --color-gray-500: theme('colors.gray.500');
-  --color-gray-50: theme('colors.gray.50');
-  --color-gray-200: theme('colors.gray.200');
-  --color-gray-800: theme('colors.gray.800');
-  --color-stone-950-15: theme('colors.stone.950 / 15%');
-  --color-indigo-500: theme('colors.indigo.500');
-  --color-red-500-15: theme('colors.red.500 / 15%');
-  --color-indigo-500-15: theme('colors.indigo.500 / 15%');
-  --color-gray-400: theme('colors.gray.400');
-  --color-red-500-30: theme('colors.red.500 / 30%');
-  --color-red-600: theme('colors.red.600');
-  --color-green-500: theme('colors.green.500');
-  --color-green-500-30: theme('colors.green.500 / 30%');
+  --color-neutral-50: theme('colors.stone.50');
+  --color-neutral-950-10: theme('colors.stone.950 / 10%');
+  --color-neutral-100: theme('colors.gray.100');
+  --color-neutral-500: theme('colors.gray.500');
+  --color-neutral-200: theme('colors.gray.200');
+  --color-neutral-800: theme('colors.gray.800');
+  --color-neutral-950-15: theme('colors.stone.950 / 15%');
+  --color-pronunciation-start: theme('colors.indigo.500');
+  --color-record-overlay-15: theme('colors.red.500 / 15%');
+  --color-pronunciation-overlay-15: theme('colors.indigo.500 / 15%');
+  --color-neutral-400: theme('colors.gray.400');
+  --color-record-overlay-30: theme('colors.red.500 / 30%');
+  --color-record-end: theme('colors.red.600');
+  --color-success-base: theme('colors.green.500');
+  --color-success-overlay-30: theme('colors.green.500 / 30%');
 }
 
 @import "./components/layout.css";
