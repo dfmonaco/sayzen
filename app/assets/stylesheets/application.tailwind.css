@@ -6,6 +6,7 @@
 
 
 @theme {
+  /* Base Colors */
   --color-primary: #5A6F5F;
   --color-secondary: #3E2C2C;
   --color-accent: #D4AF37;
@@ -13,17 +14,68 @@
   --color-text-dark: #3E2C2C;
   --color-background-light: #F5F5F0;
   --color-background-dark: #EAE8E1;
+
+  /* Semantic Colors */
+  --color-success-light: theme('colors.green.100');
+  --color-success-medium: theme('colors.green.300');
+  --color-success-base: theme('colors.green.500');
+  --color-success-dark: theme('colors.green.800');
+  --color-success-overlay-30: theme('colors.green.500 / 30%');
+
+  --color-error-light: theme('colors.red.100');
+  --color-error-medium: theme('colors.red.300');
+  --color-error-dark: theme('colors.red.800');
+
+  --color-neutral-50: theme('colors.stone.50');
+  --color-neutral-100: theme('colors.gray.100');
+  --color-neutral-200: theme('colors.gray.200');
+  --color-neutral-400: theme('colors.gray.400');
+  --color-neutral-500: theme('colors.gray.500');
+  --color-neutral-800: theme('colors.gray.800');
+  --color-neutral-950-10: theme('colors.stone.950 / 10%');
+  --color-neutral-950-15: theme('colors.stone.950 / 15%');
+
+  /* Gradients */
   --color-gradient-start: #5A6F5F;
   --color-gradient-end: #4B5C4E;
+  --color-gradient-end-20: theme('color.gradient-end / 20%');
   --color-gradient-pronunciation-start: theme('colors.indigo.500');
   --color-gradient-pronunciation-end: theme('colors.purple.500');
   --color-gradient-record-start: theme('colors.red.500');
   --color-gradient-record-end: theme('colors.red.600');
 
+  /* Specific Feature Overlays (e.g., recording, pronunciation) */
+  --color-record-overlay-15: theme('colors.red.500 / 15%');
+  --color-record-overlay-30: theme('colors.red.500 / 30%');
+  --color-pronunciation-overlay-15: theme('colors.indigo.500 / 15%');
+
+
+  /* Typography */
   --font-family-sans: ["Figtree", "sans-serif"];
   --font-family-serif: ["Merriweather", "serif"];
   --font-family-mono: ["Fira Code", "monospace"];
+  --font-size-sm: theme('fontSize.sm');
+  --font-size-base: theme('fontSize.base');
+  --font-size-lg: theme('fontSize.lg');
+  --font-size-xl: theme('fontSize.xl');
+  --font-size-2xl: theme('fontSize.2xl');
+  --font-size-3xl: theme('fontSize.3xl');
+  --font-size-4xl: theme('fontSize.4xl');
+  --font-size-5xl: theme('fontSize.5xl');
+  --font-size-6xl: theme('fontSize.6xl');
+  --font-size-7xl: theme('fontSize.7xl');
+  --font-weight-bold: theme('fontWeight.bold');
+  --font-weight-medium: theme('fontWeight.medium');
+  --font-weight-semibold: theme('fontWeight.semibold');
+  --font-weight-extrabold: theme('fontWeight.extrabold');
+  --letter-spacing-tight: theme('letterSpacing.tight');
+  --letter-spacing-tighter: theme('letterSpacing.tighter');
+  --letter-spacing-wide: theme('letterSpacing.wide');
+  --line-height-normal: theme('lineHeight.normal');
+  --line-height-relaxed: theme('lineHeight.relaxed');
 
+  /* Spacing */
+  --spacing-px: theme('spacing.px');
   --spacing-1: theme('spacing.1');
   --spacing-2: theme('spacing.2');
   --spacing-3: theme('spacing.3');
@@ -40,76 +92,40 @@
   --spacing-40: theme('spacing.40');
   --spacing-48: theme('spacing.48');
   --spacing-56: theme('spacing.56');
-  --spacing-px: theme('spacing.px');
 
+  /* Breakpoints */
   --screen-sm: theme('screens.sm');
   --screen-md: theme('screens.md');
   --screen-lg: theme('screens.lg');
   --screen-xl: theme('screens.xl');
 
-  --blur-md: theme('blur.md');
+  /* Effects */
   --blur-sm: theme('blur.sm');
-  --font-size-sm: theme('fontSize.sm');
-  --font-size-xl: theme('fontSize.xl');
-  --font-size-2xl: theme('fontSize.2xl');
-  --font-size-lg: theme('fontSize.lg');
-  --font-size-3xl: theme('fontSize.3xl');
-  --font-size-4xl: theme('fontSize.4xl');
-  --font-size-5xl: theme('fontSize.5xl');
-  --font-size-6xl: theme('fontSize.6xl');
-  --font-size-7xl: theme('fontSize.7xl');
-  --font-size-base: theme('fontSize.base');
-  --font-weight-bold: theme('fontWeight.bold');
-  --font-weight-medium: theme('fontWeight.medium');
-  --font-weight-semibold: theme('fontWeight.semibold');
-  --font-weight-extrabold: theme('fontWeight.extrabold');
-  --letter-spacing-tight: theme('letterSpacing.tight');
-  --letter-spacing-wide: theme('letterSpacing.wide');
-  --letter-spacing-tighter: theme('letterSpacing.tighter');
-  --border-radius-md: theme('borderRadius.md');
-  --border-radius-lg: theme('borderRadius.lg');
-  --border-radius-xl: theme('borderRadius.xl');
-  --border-radius-full: theme('borderRadius.full');
-  --color-white-80: theme('color.white / 80%');
-  --color-white-20: theme('color.white / 20%');
-  --color-white-90: theme('color.white / 90%');
-  --color-black-50: theme('color.black / 50%');
+  --blur-md: theme('blur.md');
   --box-shadow-md: theme('boxShadow.md');
   --box-shadow-lg: theme('boxShadow.lg');
   --box-shadow-xl: theme('boxShadow.xl');
   --box-shadow-2xl: theme('boxShadow.2xl');
-  --line-height-normal: theme('lineHeight.normal');
-  --line-height-relaxed: theme('lineHeight.relaxed');
+
+  /* Borders */
+  --border-radius-full: theme('borderRadius.full');
+  --border-radius-lg: theme('borderRadius.lg');
+  --border-radius-md: theme('borderRadius.md');
+  --border-radius-xl: theme('borderRadius.xl');
+
+  /* Overlays/Opacities */
+  --color-black-50: theme('color.black / 50%');
+  --color-white-20: theme('color.white / 20%');
+  --color-white-80: theme('color.white / 80%');
+  --color-white-90: theme('color.white / 90%');
   --color-primary-10: theme('color.primary / 10%');
   --color-primary-20: theme('color.primary / 20%');
-  --color-gradient-end-20: theme('color.gradient-end / 20%');
+
+  /* Sizing */
+  --max-width-md: theme('maxWidth.md');
   --max-width-xl: theme('maxWidth.xl');
   --max-width-2xl: theme('maxWidth.2xl');
   --max-width-3xl: theme('maxWidth.3xl');
-  --max-width-md: theme('maxWidth.md');
-
-  --color-success-light: theme('colors.green.100');
-  --color-success-dark: theme('colors.green.800');
-  --color-success-medium: theme('colors.green.300');
-  --color-error-light: theme('colors.red.100');
-  --color-error-dark: theme('colors.red.800');
-  --color-error-medium: theme('colors.red.300');
-
-  --color-neutral-50: theme('colors.stone.50');
-  --color-neutral-950-10: theme('colors.stone.950 / 10%');
-  --color-neutral-100: theme('colors.gray.100');
-  --color-neutral-500: theme('colors.gray.500');
-  --color-neutral-200: theme('colors.gray.200');
-  --color-neutral-800: theme('colors.gray.800');
-  --color-neutral-950-15: theme('colors.stone.950 / 15%');
-  --color-pronunciation-start: theme('colors.indigo.500');
-  --color-record-overlay-15: theme('colors.red.500 / 15%');
-  --color-pronunciation-overlay-15: theme('colors.indigo.500 / 15%');
-  --color-neutral-400: theme('colors.gray.400');
-  --color-record-overlay-30: theme('colors.red.500 / 30%');
-  --color-record-end: theme('colors.red.600');
-  --color-success-base: theme('colors.green.500');
-  --color-success-overlay-30: theme('colors.green.500 / 30%');
 }
 
 @import "./components/layout.css";
