@@ -16,7 +16,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, theme('colors.indigo.500'), theme('colors.purple.500'));
+    background: linear-gradient(90deg, theme('color.gradient-pronunciation-start'), theme('color.gradient-pronunciation-end'));
 }
 
 .pronunciation-practice__header {
@@ -34,7 +34,7 @@
 
 .pronunciation-practice__progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, theme('colors.indigo.500'), theme('colors.purple.500'));
+    background: linear-gradient(90deg, theme('color.gradient-pronunciation-start'), theme('color.gradient-pronunciation-end'));
     width: 30%;
     transition: width 0.3s ease;
 }
@@ -175,7 +175,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(135deg, theme('colors.red.500'), theme('colors.red.600'));
+    background: linear-gradient(135deg, theme('color.gradient-record-start'), theme('color.gradient-record-end'));
     border: none;
     color: theme('colors.stone.50');
     font-size: theme('fontSize.base');
@@ -326,7 +326,7 @@
 .pronunciation-practice__next-button {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, theme('colors.indigo.500'), theme('colors.purple.500'));
+    background: linear-gradient(135deg, theme('color.gradient-pronunciation-start'), theme('color.gradient-pronunciation-end'));
     color: theme('colors.stone.50');
     border: none;
     border-radius: 12px;
@@ -361,7 +361,7 @@
 }
 
 .pronunciation-practice__waveform--active {
-    background: linear-gradient(90deg, theme('colors.indigo.500'), theme('colors.purple.500'));
+    background: linear-gradient(90deg, theme('color.gradient-pronunciation-start'), theme('color.gradient-pronunciation-end'));
     color: theme('colors.stone.50');
 }
 

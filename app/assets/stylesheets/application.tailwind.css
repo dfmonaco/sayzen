@@ -15,6 +15,10 @@
   --color-background-dark: #EAE8E1;
   --color-gradient-start: #5A6F5F;
   --color-gradient-end: #4B5C4E;
+  --color-gradient-pronunciation-start: theme('colors.indigo.500');
+  --color-gradient-pronunciation-end: theme('colors.purple.500');
+  --color-gradient-record-start: theme('colors.red.500');
+  --color-gradient-record-end: theme('colors.red.600');
 
   --font-family-sans: ["Figtree", "sans-serif"];
   --font-family-serif: ["Merriweather", "serif"];
