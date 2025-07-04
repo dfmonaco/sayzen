@@ -1,0 +1,78 @@
+<div class="pronunciation-practice" data-controller="pronunciation">
+    <div class="pronunciation-practice__header">
+        <div class="pronunciation-practice__progress-bar">
+            <div class="pronunciation-practice__progress-fill"></div>
+        </div>
+        <div class="pronunciation-practice__session-info">
+            <span>Session 1 of 10</span>
+            <span>Sound Focus: TH vs S</span>
+        </div>
+    </div>
+
+    <div class="pronunciation-practice__minimal-pair">
+        <div class="pronunciation-practice__pair-title">Listen to both words</div>
+        <div class="pronunciation-practice__word-pair">
+            <div class="pronunciation-practice__word" data-action="click->pronunciation#playWord" data-pronunciation-target="word">
+                <div class="pronunciation-practice__word-text"><span class="pronunciation-practice__letter-highlight pronunciation-practice__letter-highlight--sound-a">TH</span>INK</div>
+                <div class="pronunciation-practice__phonetic">/<span class="pronunciation-practice__sound-highlight pronunciation-practice__sound-highlight--sound-a">θ</span>ɪŋk/</div>
+            </div>
+            <div class="pronunciation-practice__vs">vs</div>
+            <div class="pronunciation-practice__word" data-action="click->pronunciation#playWord" data-pronunciation-target="word">
+                <div class="pronunciation-practice__word-text"><span class="pronunciation-practice__letter-highlight pronunciation-practice__letter-highlight--sound-b">S</span>INK</div>
+                <div class="pronunciation-practice__phonetic">/<span class="pronunciation-practice__sound-highlight pronunciation-practice__sound-highlight--sound-b">s</span>ɪŋk/</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pronunciation-practice__recording-section">
+        <div class="pronunciation-practice__phase-indicator" data-pronunciation-target="phaseIndicator">Step 1 of 4: Record "THINK"</div>
+        <div class="pronunciation-practice__recording-word">
+            <div class="pronunciation-practice__current-word" data-pronunciation-target="currentWord">THINK</div>
+            <div class="pronunciation-practice__instruction" data-pronunciation-target="instruction">Tap to record, tap again to stop</div>
+        </div>
+        
+        <button class="pronunciation-practice__record-button" data-action="click->pronunciation#toggleRecording" data-pronunciation-target="recordButton">
+            <span data-pronunciation-target="recordText">RECORD</span>
+        </button>
+        
+        <div class="pronunciation-practice__waveform" data-pronunciation-target="waveform">
+            🎤 Ready to record
+        </div>
+    </div>
+
+    <div class="pronunciation-practice__playback-section" data-pronunciation-target="playbackSection">
+        <div class="pronunciation-practice__playback-title">Listen to the comparison</div>
+        <div class="pronunciation-practice__playback-sequence">
+            <div class="pronunciation-practice__playback-item" data-action="click->pronunciation#playComparison">
+                <div class="pronunciation-practice__playback-label">Original</div>
+                <div class="pronunciation-practice__playback-text">THINK</div>
+            </div>
+            <div class="pronunciation-practice__arrow">→</div>
+            <div class="pronunciation-practice__playback-item" data-action="click->pronunciation#playComparison">
+                <div class="pronunciation-practice__playback-label">Your Voice</div>
+                <div class="pronunciation-practice__playback-text">THINK</div>
+            </div>
+            <div class="pronunciation-practice__arrow">→</div>
+            <div class="pronunciation-practice__playback-item" data-action="click->pronunciation#playComparison">
+                <div class="pronunciation-practice__playback-label">Original</div>
+                <div class="pronunciation-practice__playback-text">THINK</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pronunciation-practice__evaluation-section">
+        <div class="pronunciation-practice__evaluation-title">How did you sound?</div>
+        <div class="pronunciation-practice__evaluation-buttons">
+            <button class="pronunciation-practice__eval-button pronunciation-practice__eval-button--try-again" data-action="click->pronunciation#evaluate" data-pronunciation-target="evalButton" data-type="try-again">
+                Try Again
+            </button>
+            <button class="pronunciation-practice__eval-button pronunciation-practice__eval-button--sounds-good" data-action="click->pronunciation#evaluate" data-pronunciation-target="evalButton" data-type="sounds-good">
+                Sounds Good!
+            </button>
+        </div>
+    </div>
+
+    <button class="pronunciation-practice__next-button" data-action="click->pronunciation#nextStep" data-pronunciation-target="nextButton">
+        Next: Record "SINK"
+    </button>
+</div>

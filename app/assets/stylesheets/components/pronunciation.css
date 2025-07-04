@@ -1,0 +1,378 @@
+.pronunciation-practice {
+    background: theme('colors.stone.50');
+    border-radius: 20px;
+    box-shadow: 0 20px 40px theme('colors.stone.950 / 10%');
+    max-width: 480px;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pronunciation-practice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, theme('colors.indigo.500'), theme('colors.purple.500'));
+}
+
+.pronunciation-practice__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pronunciation-practice__progress-bar {
+    height: 6px;
+    background: theme('colors.gray.100');
+    border-radius: 3px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.pronunciation-practice__progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, theme('colors.indigo.500'), theme('colors.purple.500'));
+    width: 30%;
+    transition: width 0.3s ease;
+}
+
+.pronunciation-practice__session-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: theme('fontSize.sm');
+    color: theme('colors.gray.500');
+}
+
+.pronunciation-practice__minimal-pair {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: theme('colors.gray.50');
+    border-radius: 12px;
+    border: 2px solid theme('colors.gray.200');
+}
+
+.pronunciation-practice__pair-title {
+    font-size: theme('fontSize.lg');
+    font-weight: theme('fontWeight.semibold');
+    color: theme('colors.gray.800');
+    margin-bottom: 15px;
+}
+
+.pronunciation-practice__word-pair {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pronunciation-practice__word {
+    background: theme('colors.stone.50');
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px theme('colors.stone.950 / 10%');
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.pronunciation-practice__word:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px theme('colors.stone.950 / 15%');
+    border-color: theme('colors.indigo.500');
+}
+
+.pronunciation-practice__word--playing {
+    background: theme('colors.indigo.500');
+    color: theme('colors.stone.50');
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.pronunciation-practice__word-text {
+    font-size: theme('fontSize.2xl');
+    font-weight: theme('fontWeight.bold');
+    margin-bottom: 5px;
+}
+
+.pronunciation-practice__letter-highlight {
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: theme('fontWeight.bold');
+}
+
+.pronunciation-practice__letter-highlight--sound-a {
+    color: theme('colors.red.500');
+    background: theme('colors.red.500 / 15%');
+}
+
+.pronunciation-practice__letter-highlight--sound-b {
+    color: theme('colors.indigo.500');
+    background: theme('colors.indigo.500 / 15%');
+}
+
+.pronunciation-practice__phonetic {
+    font-size: theme('fontSize.sm');
+    color: theme('colors.gray.500');
+    font-style: italic;
+}
+
+.pronunciation-practice__sound-highlight {
+    font-weight: theme('fontWeight.bold');
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-style: normal;
+}
+
+.pronunciation-practice__sound-highlight--sound-a {
+    color: theme('colors.red.500');
+    background: theme('colors.red.500 / 10%');
+}
+
+.pronunciation-practice__sound-highlight--sound-b {
+    color: theme('colors.indigo.500');
+    background: theme('colors.indigo.500 / 10%');
+}
+
+.pronunciation-practice__vs {
+    font-size: theme('fontSize.lg');
+    color: theme('colors.gray.400');
+    font-weight: theme('fontWeight.medium');
+}
+
+.pronunciation-practice__recording-section {
+    margin-bottom: 30px;
+}
+
+.pronunciation-practice__recording-word {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pronunciation-practice__current-word {
+    font-size: theme('fontSize.3xl');
+    font-weight: theme('fontWeight.bold');
+    color: theme('colors.indigo.500');
+    margin-bottom: 10px;
+}
+
+.pronunciation-practice__instruction {
+    font-size: theme('fontSize.base');
+    color: theme('colors.gray.500');
+    margin-bottom: 20px;
+}
+
+.pronunciation-practice__record-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, theme('colors.red.500'), theme('colors.red.600'));
+    border: none;
+    color: theme('colors.stone.50');
+    font-size: theme('fontSize.base');
+    font-weight: theme('fontWeight.semibold');
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 15px theme('colors.red.500 / 30%');
+}
+
+.pronunciation-practice__record-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px theme('colors.red.500 / 40%');
+}
+
+.pronunciation-practice__record-button--recording {
+    background: theme('colors.red.600');
+    animation: recording-pulse 1s ease-in-out infinite;
+}
+
+.pronunciation-practice__record-button--recorded {
+    background: theme('colors.green.500');
+    box-shadow: 0 4px 15px theme('colors.green.500 / 30%');
+}
+
+@keyframes recording-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.pronunciation-practice__playback-section {
+    background: theme('colors.gray.50');
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.pronunciation-practice__playback-section--active {
+    display: block;
+}
+
+.pronunciation-practice__playback-title {
+    font-size: theme('fontSize.base');
+    font-weight: theme('fontWeight.semibold');
+    margin-bottom: 15px;
+    text-align: center;
+    color: theme('colors.gray.800');
+}
+
+.pronunciation-practice__playback-sequence {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.pronunciation-practice__playback-item {
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+    background: theme('colors.stone.50');
+    border-radius: 8px;
+    margin: 0 5px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.pronunciation-practice__playback-item--playing {
+    background: theme('colors.indigo.500');
+    color: theme('colors.stone.50');
+    transform: scale(1.05);
+}
+
+.pronunciation-practice__playback-label {
+    font-size: theme('fontSize.xs');
+    color: theme('colors.gray.500');
+    margin-bottom: 5px;
+}
+
+.pronunciation-practice__playback-item--playing .pronunciation-practice__playback-label {
+    color: theme('colors.stone.50');
+}
+
+.pronunciation-practice__playback-text {
+    font-size: theme('fontSize.sm');
+    font-weight: theme('fontWeight.semibold');
+}
+
+.pronunciation-practice__evaluation-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pronunciation-practice__evaluation-title {
+    font-size: theme('fontSize.lg');
+    font-weight: theme('fontWeight.semibold');
+    margin-bottom: 15px;
+    color: theme('colors.gray.800');
+}
+
+.pronunciation-practice__evaluation-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.pronunciation-practice__eval-button {
+    padding: 12px 20px;
+    border: 2px solid theme('colors.gray.200');
+    background: theme('colors.stone.50');
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: theme('fontWeight.semibold');
+    transition: all 0.2s ease;
+}
+
+.pronunciation-practice__eval-button--try-again {
+    color: theme('colors.red.500');
+    border-color: theme('colors.red.500');
+}
+
+.pronunciation-practice__eval-button--sounds-good {
+    color: theme('colors.green.500');
+    border-color: theme('colors.green.500');
+}
+
+.pronunciation-practice__eval-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px theme('colors.stone.950 / 10%');
+}
+
+.pronunciation-practice__eval-button--selected {
+    color: theme('colors.stone.50');
+}
+
+.pronunciation-practice__eval-button--try-again.pronunciation-practice__eval-button--selected {
+    background: theme('colors.red.500');
+}
+
+.pronunciation-practice__eval-button--sounds-good.pronunciation-practice__eval-button--selected {
+    background: theme('colors.green.500');
+}
+
+.pronunciation-practice__next-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, theme('colors.indigo.500'), theme('colors.purple.500'));
+    color: theme('colors.stone.50');
+    border: none;
+    border-radius: 12px;
+    font-size: theme('fontSize.base');
+    font-weight: theme('fontWeight.semibold');
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.pronunciation-practice__next-button--active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.pronunciation-practice__next-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px theme('colors.indigo.500 / 30%');
+}
+
+.pronunciation-practice__waveform {
+    height: 40px;
+    background: theme('colors.gray.100');
+    border-radius: 8px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: theme('fontSize.sm');
+    color: theme('colors.gray.500');
+}
+
+.pronunciation-practice__waveform--active {
+    background: linear-gradient(90deg, theme('colors.indigo.500'), theme('colors.purple.500'));
+    color: theme('colors.stone.50');
+}
+
+.pronunciation-practice__phase-indicator {
+    font-size: theme('fontSize.sm');
+    color: theme('colors.gray.500');
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pronunciation-practice__arrow {
+    font-size: theme('fontSize.lg');
+    color: theme('colors.indigo.500');
+}
