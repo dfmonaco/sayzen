@@ -36,6 +36,8 @@
   --spacing-16: theme('spacing.16');
   --spacing-20: theme('spacing.20');
   --spacing-24: theme('spacing.24');
+  --spacing-32: theme('spacing.32');
+  --spacing-40: theme('spacing.40');
   --spacing-48: theme('spacing.48');
   --spacing-56: theme('spacing.56');
   --spacing-px: theme('spacing.px');
@@ -52,12 +54,17 @@
   --font-size-lg: theme('fontSize.lg');
   --font-size-3xl: theme('fontSize.3xl');
   --font-size-4xl: theme('fontSize.4xl');
+  --font-size-5xl: theme('fontSize.5xl');
+  --font-size-6xl: theme('fontSize.6xl');
+  --font-size-7xl: theme('fontSize.7xl');
   --font-size-base: theme('fontSize.base');
   --font-weight-bold: theme('fontWeight.bold');
   --font-weight-medium: theme('fontWeight.medium');
   --font-weight-semibold: theme('fontWeight.semibold');
+  --font-weight-extrabold: theme('fontWeight.extrabold');
   --letter-spacing-tight: theme('letterSpacing.tight');
   --letter-spacing-wide: theme('letterSpacing.wide');
+  --letter-spacing-tighter: theme('letterSpacing.tighter');
   --border-radius-md: theme('borderRadius.md');
   --border-radius-lg: theme('borderRadius.lg');
   --border-radius-xl: theme('borderRadius.xl');
@@ -73,8 +80,10 @@
   --line-height-relaxed: theme('lineHeight.relaxed');
   --color-primary-10: theme('color.primary / 10%');
   --color-primary-20: theme('color.primary / 20%');
+  --color-gradient-end-20: theme('color.gradient-end / 20%');
   --max-width-xl: theme('maxWidth.xl');
   --max-width-2xl: theme('maxWidth.2xl');
+  --max-width-3xl: theme('maxWidth.3xl');
 }
 
 @import "./components/layout.css";
