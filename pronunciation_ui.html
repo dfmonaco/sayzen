@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronunciation Practice - Minimal Pairs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 480px;
+            width: 100%;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #f0f0f0;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 30%;
+            transition: width 0.3s ease;
+        }
+
+        .session-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .minimal-pair {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 2px solid #e9ecef;
+        }
+
+        .pair-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .word-pair {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .word {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .word:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .word.playing {
+            background: #667eea;
+            color: white;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .word-text {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .letter-highlight {
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .letter-highlight.sound-a {
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.15);
+        }
+
+        .letter-highlight.sound-b {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.15);
+        }
+
+        .phonetic {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .sound-highlight {
+            color: #ff6b6b;
+            font-weight: 700;
+            background: rgba(255, 107, 107, 0.1);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-style: normal;
+        }
+
+        .sound-highlight.sound-a {
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+        }
+
+        .sound-highlight.sound-b {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .vs {
+            font-size: 18px;
+            color: #999;
+            font-weight: 500;
+        }
+
+        .recording-section {
+            margin-bottom: 30px;
+        }
+
+        .recording-word {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .current-word {
+            font-size: 28px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .instruction {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .record-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .record-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .record-button.recording {
+            background: #ff4757;
+            animation: recording-pulse 1s ease-in-out infinite;
+        }
+
+        .record-button.recorded {
+            background: #2ed573;
+            box-shadow: 0 4px 15px rgba(46, 213, 115, 0.3);
+        }
+
+        @keyframes recording-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .playback-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .playback-section.active {
+            display: block;
+        }
+
+        .playback-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #333;
+        }
+
+        .playback-sequence {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .playback-item {
+            text-align: center;
+            flex: 1;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            margin: 0 5px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .playback-item.playing {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .playback-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .playback-item.playing .playback-label {
+            color: white;
+        }
+
+        .playback-text {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .evaluation-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .evaluation-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .evaluation-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .eval-button {
+            padding: 12px 20px;
+            border: 2px solid #e9ecef;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .eval-button.try-again {
+            color: #ff6b6b;
+            border-color: #ff6b6b;
+        }
+
+        .eval-button.sounds-good {
+            color: #2ed573;
+            border-color: #2ed573;
+        }
+
+        .eval-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .eval-button.selected {
+            color: white;
+        }
+
+        .eval-button.try-again.selected {
+            background: #ff6b6b;
+        }
+
+        .eval-button.sounds-good.selected {
+            background: #2ed573;
+        }
+
+        .next-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .next-button.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .next-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .waveform {
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .waveform.active {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .phase-indicator {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .arrow {
+            font-size: 18px;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="session-info">
+                <span>Session 1 of 10</span>
+                <span>Sound Focus: TH vs S</span>
+            </div>
+        </div>
+
+        <div class="minimal-pair">
+            <div class="pair-title">Listen to both words</div>
+            <div class="word-pair">
+                <div class="word" onclick="playWord('think')">
+                    <div class="word-text"><span class="letter-highlight sound-a">TH</span>INK</div>
+                    <div class="phonetic">/<span class="sound-highlight sound-a">θ</span>ɪŋk/</div>
+                </div>
+                <div class="vs">vs</div>
+                <div class="word" onclick="playWord('sink')">
+                    <div class="word-text"><span class="letter-highlight sound-b">S</span>INK</div>
+                    <div class="phonetic">/<span class="sound-highlight sound-b">s</span>ɪŋk/</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recording-section">
+            <div class="phase-indicator">Step 1 of 4: Record "THINK"</div>
+            <div class="recording-word">
+                <div class="current-word">THINK</div>
+                <div class="instruction">Tap to record, tap again to stop</div>
+            </div>
+            
+            <button class="record-button" onclick="toggleRecording()">
+                <span id="record-text">RECORD</span>
+            </button>
+            
+            <div class="waveform" id="waveform">
+                🎤 Ready to record
+            </div>
+        </div>
+
+        <div class="playback-section" id="playback-section">
+            <div class="playback-title">Listen to the comparison</div>
+            <div class="playback-sequence">
+                <div class="playback-item" onclick="playComparison('original')">
+                    <div class="playback-label">Original</div>
+                    <div class="playback-text">THINK</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="playback-item" onclick="playComparison('user')">
+                    <div class="playback-label">Your Voice</div>
+                    <div class="playback-text">THINK</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="playback-item" onclick="playComparison('original2')">
+                    <div class="playback-label">Original</div>
+                    <div class="playback-text">THINK</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="evaluation-section">
+            <div class="evaluation-title">How did you sound?</div>
+            <div class="evaluation-buttons">
+                <button class="eval-button try-again" onclick="evaluate('try-again')">
+                    Try Again
+                </button>
+                <button class="eval-button sounds-good" onclick="evaluate('sounds-good')">
+                    Sounds Good!
+                </button>
+            </div>
+        </div>
+
+        <button class="next-button" onclick="nextStep()">
+            Next: Record "SINK"
+        </button>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        let isRecording = false;
+        let evaluation = null;
+
+        function playWord(word) {
+            const wordElements = document.querySelectorAll('.word');
+            wordElements.forEach(el => el.classList.remove('playing'));
+            
+            event.target.closest('.word').classList.add('playing');
+            
+            // Simulate audio playback
+            setTimeout(() => {
+                event.target.closest('.word').classList.remove('playing');
+            }, 1500);
+        }
+
+        function toggleRecording() {
+            const button = document.querySelector('.record-button');
+            const text = document.getElementById('record-text');
+            const waveform = document.getElementById('waveform');
+            
+            if (!isRecording) {
+                // Start recording
+                isRecording = true;
+                button.classList.add('recording');
+                text.textContent = 'STOP';
+                waveform.classList.add('active');
+                waveform.textContent = '🎤 Recording...';
+            } else {
+                // Stop recording
+                isRecording = false;
+                button.classList.remove('recording');
+                button.classList.add('recorded');
+                text.textContent = '✓ RECORDED';
+                waveform.classList.remove('active');
+                waveform.textContent = '✓ Recording saved';
+                
+                // Show playback section
+                document.getElementById('playback-section').classList.add('active');
+            }
+        }
+
+        function playComparison(type) {
+            const items = document.querySelectorAll('.playback-item');
+            items.forEach(item => item.classList.remove('playing'));
+            
+            event.target.closest('.playback-item').classList.add('playing');
+            
+            setTimeout(() => {
+                event.target.closest('.playback-item').classList.remove('playing');
+            }, 1000);
+        }
+
+        function evaluate(type) {
+            evaluation = type;
+            const buttons = document.querySelectorAll('.eval-button');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            
+            event.target.classList.add('selected');
+            
+            // Enable next button
+            const nextButton = document.querySelector('.next-button');
+            nextButton.classList.add('active');
+        }
+
+        function nextStep() {
+            if (!evaluation) return;
+            
+            currentStep++;
+            
+            if (currentStep === 2) {
+                // Move to second word
+                document.querySelector('.current-word').textContent = 'SINK';
+                document.querySelector('.phase-indicator').textContent = 'Step 2 of 4: Record "SINK"';
+                document.querySelector('.next-button').textContent = 'Next: Compare Both Words';
+                
+                // Reset recording state
+                resetRecordingState();
+            } else if (currentStep === 3) {
+                // Move to final comparison
+                document.querySelector('.phase-indicator').textContent = 'Step 3 of 4: Final Comparison';
+                document.querySelector('.current-word').textContent = 'THINK vs SINK';
+                document.querySelector('.instruction').textContent = 'Listen to both of your recordings';
+                document.querySelector('.next-button').textContent = 'Complete Pair';
+                
+                resetRecordingState();
+            } else {
+                // Complete the pair
+                alert('Great job! Moving to next minimal pair...');
+                // Here you would load the next pair
+            }
+        }
+
+        function resetRecordingState() {
+            const button = document.querySelector('.record-button');
+            const text = document.getElementById('record-text');
+            const waveform = document.getElementById('waveform');
+            const playback = document.getElementById('playback-section');
+            const nextButton = document.querySelector('.next-button');
+            
+            button.classList.remove('recording', 'recorded');
+            text.textContent = 'RECORD';
+            waveform.classList.remove('active');
+            waveform.textContent = '🎤 Ready to record';
+            playback.classList.remove('active');
+            nextButton.classList.remove('active');
+            
+            // Reset evaluation
+            evaluation = null;
+            document.querySelectorAll('.eval-button').forEach(btn => btn.classList.remove('selected'));
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Pronunciation Practice UI loaded');
+        });
+    </script>
+</body>
+</html>

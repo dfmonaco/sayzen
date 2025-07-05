@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Discrimination - Minimal Pairs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 480px;
+            width: 100%;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #f0f0f0;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 45%;
+            transition: width 0.3s ease;
+        }
+
+        .session-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .listening-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px 20px;
+            background: #f8f9fa;
+            border-radius: 16px;
+            border: 2px solid #e9ecef;
+        }
+
+        .instruction-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .instruction-text {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .play-section {
+            margin-bottom: 25px;
+        }
+
+        .play-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+            position: relative;
+        }
+
+        .play-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .play-button.playing {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            animation: playing-pulse 1.5s ease-in-out infinite;
+        }
+
+        .play-button.playing::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid #ff6b6b;
+            border-radius: 50%;
+            opacity: 0;
+            animation: sound-wave 1.5s ease-out infinite;
+        }
+
+        @keyframes playing-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes sound-wave {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+
+        .play-count {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .options-section {
+            margin-bottom: 30px;
+        }
+
+        .options-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .word-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .word-option {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .word-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .word-option:hover::before {
+            left: 100%;
+        }
+
+        .word-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+
+        .word-option.selected {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .word-option.correct {
+            border-color: #2ed573;
+            background: rgba(46, 213, 115, 0.1);
+            animation: correct-bounce 0.6s ease-out;
+        }
+
+        .word-option.incorrect {
+            border-color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+            animation: incorrect-shake 0.6s ease-out;
+        }
+
+        .word-option.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        @keyframes correct-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes incorrect-shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        .option-word {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .option-phonetic {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .sound-highlight {
+            color: #ff6b6b;
+            font-weight: 700;
+            background: rgba(255, 107, 107, 0.1);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-style: normal;
+        }
+
+        .sound-highlight.sound-a {
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+        }
+
+        .sound-highlight.sound-b {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .letter-highlight {
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .letter-highlight.sound-a {
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.15);
+        }
+
+        .letter-highlight.sound-b {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.15);
+        }
+
+        .feedback-section {
+            text-align: center;
+            margin-bottom: 20px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feedback-message {
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px 25px;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .feedback-message.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feedback-message.correct {
+            background: rgba(46, 213, 115, 0.1);
+            color: #2ed573;
+            border: 2px solid #2ed573;
+        }
+
+        .feedback-message.incorrect {
+            background: rgba(255, 107, 107, 0.1);
+            color: #ff6b6b;
+            border: 2px solid #ff6b6b;
+        }
+
+        .next-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .next-button.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .next-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .replay-hint {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .sound-focus {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sound-focus-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .sound-focus-text {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="session-info">
+                <span>Listening Practice</span>
+                <span>Question 3 of 8</span>
+            </div>
+        </div>
+
+        <div class="sound-focus">
+            <div class="sound-focus-title">Focus Sounds</div>
+            <div class="sound-focus-text">
+                <span class="sound-highlight sound-a">θ</span> (TH) vs <span class="sound-highlight sound-b">s</span> (S)
+            </div>
+        </div>
+
+        <div class="listening-section">
+            <div class="instruction-title">🎧 Listen Carefully</div>
+            <div class="instruction-text">
+                Play the audio and select the word you hear
+            </div>
+            
+            <div class="play-section">
+                <button class="play-button" onclick="playAudio()">
+                    <span id="play-text">▶ PLAY</span>
+                </button>
+                <div class="play-count" id="play-count">Click to play audio</div>
+            </div>
+            
+            <div class="replay-hint">
+                💡 You can replay the audio as many times as you need
+            </div>
+        </div>
+
+        <div class="options-section">
+            <div class="options-title">Which word did you hear?</div>
+            <div class="word-options">
+                <div class="word-option" onclick="selectOption('think')">
+                    <div class="option-word"><span class="letter-highlight sound-a">TH</span>INK</div>
+                    <div class="option-phonetic">/<span class="sound-highlight sound-a">θ</span>ɪŋk/</div>
+                </div>
+                <div class="word-option" onclick="selectOption('sink')">
+                    <div class="option-word"><span class="letter-highlight sound-b">S</span>INK</div>
+                    <div class="option-phonetic">/<span class="sound-highlight sound-b">s</span>ɪŋk/</div>
+                </div>
+                <div class="word-option" onclick="selectOption('thick')">
+                    <div class="option-word"><span class="letter-highlight sound-a">TH</span>ICK</div>
+                    <div class="option-phonetic">/<span class="sound-highlight sound-a">θ</span>ɪk/</div>
+                </div>
+                <div class="word-option" onclick="selectOption('sick')">
+                    <div class="option-word"><span class="letter-highlight sound-b">S</span>ICK</div>
+                    <div class="option-phonetic">/<span class="sound-highlight sound-b">s</span>ɪk/</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-section">
+            <div class="feedback-message" id="feedback-message">
+                <!-- Feedback will appear here -->
+            </div>
+        </div>
+
+        <button class="next-button" onclick="nextQuestion()">
+            Next Question
+        </button>
+    </div>
+
+    <script>
+        let currentAnswer = 'think'; // The correct answer for this question
+        let hasPlayed = false;
+        let playCount = 0;
+        let selectedAnswer = null;
+        let answered = false;
+
+        function playAudio() {
+            if (answered) return;
+            
+            const button = document.querySelector('.play-button');
+            const text = document.getElementById('play-text');
+            const counter = document.getElementById('play-count');
+            
+            button.classList.add('playing');
+            text.textContent = '🔊 PLAYING';
+            hasPlayed = true;
+            playCount++;
+            
+            // Simulate audio playback
+            setTimeout(() => {
+                button.classList.remove('playing');
+                text.textContent = '▶ REPLAY';
+                counter.textContent = `Played ${playCount} time${playCount > 1 ? 's' : ''}`;
+            }, 1500);
+        }
+
+        function selectOption(word) {
+            if (answered) return;
+            
+            selectedAnswer = word;
+            answered = true;
+            
+            // Remove any previous selections
+            document.querySelectorAll('.word-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Mark selected option
+            event.target.closest('.word-option').classList.add('selected');
+            
+            // Disable all options
+            document.querySelectorAll('.word-option').forEach(option => {
+                option.classList.add('disabled');
+            });
+            
+            // Show feedback after a brief delay
+            setTimeout(() => {
+                showFeedback(word);
+            }, 500);
+        }
+
+        function showFeedback(selectedWord) {
+            const feedbackElement = document.getElementById('feedback-message');
+            const selectedOption = document.querySelector('.word-option.selected');
+            const correctOption = document.querySelector(`[onclick="selectOption('${currentAnswer}')"]`);
+            
+            if (selectedWord === currentAnswer) {
+                // Correct answer
+                feedbackElement.textContent = '🎉 Excellent! That\'s correct!';
+                feedbackElement.className = 'feedback-message correct show';
+                selectedOption.classList.add('correct');
+            } else {
+                // Incorrect answer
+                feedbackElement.innerHTML = `❌ Not quite. The correct answer was <strong>${currentAnswer.toUpperCase()}</strong>`;
+                feedbackElement.className = 'feedback-message incorrect show';
+                selectedOption.classList.add('incorrect');
+                correctOption.classList.add('correct');
+            }
+            
+            // Enable next button
+            document.querySelector('.next-button').classList.add('active');
+        }
+
+        function nextQuestion() {
+            if (!answered) return;
+            
+            // Simulate moving to next question
+            alert('Moving to next listening question...');
+            
+            // In a real app, this would load the next question
+            // resetQuestion();
+        }
+
+        function resetQuestion() {
+            answered = false;
+            hasPlayed = false;
+            playCount = 0;
+            selectedAnswer = null;
+            
+            // Reset UI
+            document.querySelectorAll('.word-option').forEach(option => {
+                option.className = 'word-option';
+            });
+            
+            document.getElementById('feedback-message').className = 'feedback-message';
+            document.querySelector('.next-button').classList.remove('active');
+            document.getElementById('play-text').textContent = '▶ PLAY';
+            document.getElementById('play-count').textContent = 'Click to play audio';
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Listening Discrimination UI loaded');
+            
+            // Simulate different correct answers for demo
+            const possibleAnswers = ['think', 'sink', 'thick', 'sick'];
+            currentAnswer = possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
+            console.log('Correct answer for this round:', currentAnswer);
+        });
+    </script>
+</body>
+</html>

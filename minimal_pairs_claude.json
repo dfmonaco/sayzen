@@ -1,0 +1,1856 @@
+[
+  {
+    "id": "think-sink",
+    "contrast": {
+      "label": "/θ/ vs /s/",
+      "sound_a": "θ",
+      "sound_b": "s"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "think",
+        "definition": "To use one's mind to consider or reason about something.",
+        "segments": [
+          { "highlight": true, "letters": "th" },
+          { "highlight": false, "letters": "ink" }
+        ],
+        "phonetic": {
+          "text": "/θɪŋk/",
+          "segments": [
+            { "highlight": true, "letters": "θ" },
+            { "highlight": false, "letters": "ɪŋk" }
+          ]
+        },
+        "audio": "audio/think.mp3"
+      },
+      {
+        "word": "sink",
+        "definition": "To go down below the surface of something, especially of a liquid.",
+        "segments": [
+          { "highlight": true, "letters": "s" },
+          { "highlight": false, "letters": "ink" }
+        ],
+        "phonetic": {
+          "text": "/sɪŋk/",
+          "segments": [
+            { "highlight": true, "letters": "s" },
+            { "highlight": false, "letters": "ɪŋk" }
+          ]
+        },
+        "audio": "audio/sink.mp3"
+      }
+    ]
+  },
+  {
+    "id": "bat-pat",
+    "contrast": {
+      "label": "/b/ vs /p/",
+      "sound_a": "b",
+      "sound_b": "p"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "bat",
+        "definition": "A wooden stick used in baseball or cricket.",
+        "segments": [
+          { "highlight": true, "letters": "b" },
+          { "highlight": false, "letters": "at" }
+        ],
+        "phonetic": {
+          "text": "/bæt/",
+          "segments": [
+            { "highlight": true, "letters": "b" },
+            { "highlight": false, "letters": "æt" }
+          ]
+        },
+        "audio": "audio/bat.mp3"
+      },
+      {
+        "word": "pat",
+        "definition": "To touch gently with the hand.",
+        "segments": [
+          { "highlight": true, "letters": "p" },
+          { "highlight": false, "letters": "at" }
+        ],
+        "phonetic": {
+          "text": "/pæt/",
+          "segments": [
+            { "highlight": true, "letters": "p" },
+            { "highlight": false, "letters": "æt" }
+          ]
+        },
+        "audio": "audio/pat.mp3"
+      }
+    ]
+  },
+  {
+    "id": "cat-cut",
+    "contrast": {
+      "label": "/æ/ vs /ʌ/",
+      "sound_a": "æ",
+      "sound_b": "ʌ"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "cat",
+        "definition": "A small domesticated carnivorous mammal.",
+        "segments": [
+          { "highlight": false, "letters": "c" },
+          { "highlight": true, "letters": "a" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/kæt/",
+          "segments": [
+            { "highlight": false, "letters": "k" },
+            { "highlight": true, "letters": "æ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/cat.mp3"
+      },
+      {
+        "word": "cut",
+        "definition": "To make an opening or wound with a sharp instrument.",
+        "segments": [
+          { "highlight": false, "letters": "c" },
+          { "highlight": true, "letters": "u" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/kʌt/",
+          "segments": [
+            { "highlight": false, "letters": "k" },
+            { "highlight": true, "letters": "ʌ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/cut.mp3"
+      }
+    ]
+  },
+  {
+    "id": "sheep-ship",
+    "contrast": {
+      "label": "/i:/ vs /ɪ/",
+      "sound_a": "i:",
+      "sound_b": "ɪ"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "sheep",
+        "definition": "A domesticated ruminant mammal with wool.",
+        "segments": [
+          { "highlight": false, "letters": "sh" },
+          { "highlight": true, "letters": "ee" },
+          { "highlight": false, "letters": "p" }
+        ],
+        "phonetic": {
+          "text": "/ʃi:p/",
+          "segments": [
+            { "highlight": false, "letters": "ʃ" },
+            { "highlight": true, "letters": "i:" },
+            { "highlight": false, "letters": "p" }
+          ]
+        },
+        "audio": "audio/sheep.mp3"
+      },
+      {
+        "word": "ship",
+        "definition": "A large watercraft for transportation.",
+        "segments": [
+          { "highlight": false, "letters": "sh" },
+          { "highlight": true, "letters": "i" },
+          { "highlight": false, "letters": "p" }
+        ],
+        "phonetic": {
+          "text": "/ʃɪp/",
+          "segments": [
+            { "highlight": false, "letters": "ʃ" },
+            { "highlight": true, "letters": "ɪ" },
+            { "highlight": false, "letters": "p" }
+          ]
+        },
+        "audio": "audio/ship.mp3"
+      }
+    ]
+  },
+  {
+    "id": "van-fan",
+    "contrast": {
+      "label": "/v/ vs /f/",
+      "sound_a": "v",
+      "sound_b": "f"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "van",
+        "definition": "A road vehicle for transporting goods or people.",
+        "segments": [
+          { "highlight": true, "letters": "v" },
+          { "highlight": false, "letters": "an" }
+        ],
+        "phonetic": {
+          "text": "/væn/",
+          "segments": [
+            { "highlight": true, "letters": "v" },
+            { "highlight": false, "letters": "æn" }
+          ]
+        },
+        "audio": "audio/van.mp3"
+      },
+      {
+        "word": "fan",
+        "definition": "A device for creating airflow or an enthusiast.",
+        "segments": [
+          { "highlight": true, "letters": "f" },
+          { "highlight": false, "letters": "an" }
+        ],
+        "phonetic": {
+          "text": "/fæn/",
+          "segments": [
+            { "highlight": true, "letters": "f" },
+            { "highlight": false, "letters": "æn" }
+          ]
+        },
+        "audio": "audio/fan.mp3"
+      }
+    ]
+  },
+  {
+    "id": "thick-sick",
+    "contrast": {
+      "label": "/θ/ vs /s/",
+      "sound_a": "θ",
+      "sound_b": "s"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "thick",
+        "definition": "Having a large distance between opposite sides.",
+        "segments": [
+          { "highlight": true, "letters": "th" },
+          { "highlight": false, "letters": "ick" }
+        ],
+        "phonetic": {
+          "text": "/θɪk/",
+          "segments": [
+            { "highlight": true, "letters": "θ" },
+            { "highlight": false, "letters": "ɪk" }
+          ]
+        },
+        "audio": "audio/thick.mp3"
+      },
+      {
+        "word": "sick",
+        "definition": "Affected by illness or disease.",
+        "segments": [
+          { "highlight": true, "letters": "s" },
+          { "highlight": false, "letters": "ick" }
+        ],
+        "phonetic": {
+          "text": "/sɪk/",
+          "segments": [
+            { "highlight": true, "letters": "s" },
+            { "highlight": false, "letters": "ɪk" }
+          ]
+        },
+        "audio": "audio/sick.mp3"
+      }
+    ]
+  },
+  {
+    "id": "zip-sip",
+    "contrast": {
+      "label": "/z/ vs /s/",
+      "sound_a": "z",
+      "sound_b": "s"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "zip",
+        "definition": "To fasten with a zipper or move quickly.",
+        "segments": [
+          { "highlight": true, "letters": "z" },
+          { "highlight": false, "letters": "ip" }
+        ],
+        "phonetic": {
+          "text": "/zɪp/",
+          "segments": [
+            { "highlight": true, "letters": "z" },
+            { "highlight": false, "letters": "ɪp" }
+          ]
+        },
+        "audio": "audio/zip.mp3"
+      },
+      {
+        "word": "sip",
+        "definition": "To drink in small quantities.",
+        "segments": [
+          { "highlight": true, "letters": "s" },
+          { "highlight": false, "letters": "ip" }
+        ],
+        "phonetic": {
+          "text": "/sɪp/",
+          "segments": [
+            { "highlight": true, "letters": "s" },
+            { "highlight": false, "letters": "ɪp" }
+          ]
+        },
+        "audio": "audio/sip.mp3"
+      }
+    ]
+  },
+  {
+    "id": "bit-bet",
+    "contrast": {
+      "label": "/ɪ/ vs /e/",
+      "sound_a": "ɪ",
+      "sound_b": "e"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "bit",
+        "definition": "A small piece or amount.",
+        "segments": [
+          { "highlight": false, "letters": "b" },
+          { "highlight": true, "letters": "i" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/bɪt/",
+          "segments": [
+            { "highlight": false, "letters": "b" },
+            { "highlight": true, "letters": "ɪ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/bit.mp3"
+      },
+      {
+        "word": "bet",
+        "definition": "To risk money on the outcome of an event.",
+        "segments": [
+          { "highlight": false, "letters": "b" },
+          { "highlight": true, "letters": "e" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/bet/",
+          "segments": [
+            { "highlight": false, "letters": "b" },
+            { "highlight": true, "letters": "e" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/bet.mp3"
+      }
+    ]
+  },
+  {
+    "id": "lock-rock",
+    "contrast": {
+      "label": "/l/ vs /r/",
+      "sound_a": "l",
+      "sound_b": "r"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "lock",
+        "definition": "A fastening device operated by a key.",
+        "segments": [
+          { "highlight": true, "letters": "l" },
+          { "highlight": false, "letters": "ock" }
+        ],
+        "phonetic": {
+          "text": "/lɒk/",
+          "segments": [
+            { "highlight": true, "letters": "l" },
+            { "highlight": false, "letters": "ɒk" }
+          ]
+        },
+        "audio": "audio/lock.mp3"
+      },
+      {
+        "word": "rock",
+        "definition": "A hard mineral matter or to move back and forth.",
+        "segments": [
+          { "highlight": true, "letters": "r" },
+          { "highlight": false, "letters": "ock" }
+        ],
+        "phonetic": {
+          "text": "/rɒk/",
+          "segments": [
+            { "highlight": true, "letters": "r" },
+            { "highlight": false, "letters": "ɒk" }
+          ]
+        },
+        "audio": "audio/rock.mp3"
+      }
+    ]
+  },
+  {
+    "id": "cap-cup",
+    "contrast": {
+      "label": "/æ/ vs /ʌ/",
+      "sound_a": "æ",
+      "sound_b": "ʌ"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "cap",
+        "definition": "A head covering or lid.",
+        "segments": [
+          { "highlight": false, "letters": "c" },
+          { "highlight": true, "letters": "a" },
+          { "highlight": false, "letters": "p" }
+        ],
+        "phonetic": {
+          "text": "/kæp/",
+          "segments": [
+            { "highlight": false, "letters": "k" },
+            { "highlight": true, "letters": "æ" },
+            { "highlight": false, "letters": "p" }
+          ]
+        },
+        "audio": "audio/cap.mp3"
+      },
+      {
+        "word": "cup",
+        "definition": "A small drinking vessel.",
+        "segments": [
+          { "highlight": false, "letters": "c" },
+          { "highlight": true, "letters": "u" },
+          { "highlight": false, "letters": "p" }
+        ],
+        "phonetic": {
+          "text": "/kʌp/",
+          "segments": [
+            { "highlight": false, "letters": "k" },
+            { "highlight": true, "letters": "ʌ" },
+            { "highlight": false, "letters": "p" }
+          ]
+        },
+        "audio": "audio/cup.mp3"
+      }
+    ]
+  },
+  {
+    "id": "this-dis",
+    "contrast": {
+      "label": "/ð/ vs /d/",
+      "sound_a": "ð",
+      "sound_b": "d"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "this",
+        "definition": "Used to identify a specific person or thing.",
+        "segments": [
+          { "highlight": true, "letters": "th" },
+          { "highlight": false, "letters": "is" }
+        ],
+        "phonetic": {
+          "text": "/ðɪs/",
+          "segments": [
+            { "highlight": true, "letters": "ð" },
+            { "highlight": false, "letters": "ɪs" }
+          ]
+        },
+        "audio": "audio/this.mp3"
+      },
+      {
+        "word": "dis",
+        "definition": "To show disrespect (informal).",
+        "segments": [
+          { "highlight": true, "letters": "d" },
+          { "highlight": false, "letters": "is" }
+        ],
+        "phonetic": {
+          "text": "/dɪs/",
+          "segments": [
+            { "highlight": true, "letters": "d" },
+            { "highlight": false, "letters": "ɪs" }
+          ]
+        },
+        "audio": "audio/dis.mp3"
+      }
+    ]
+  },
+  {
+    "id": "thin-fin",
+    "contrast": {
+      "label": "/θ/ vs /f/",
+      "sound_a": "θ",
+      "sound_b": "f"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "thin",
+        "definition": "Having little thickness or width.",
+        "segments": [
+          { "highlight": true, "letters": "th" },
+          { "highlight": false, "letters": "in" }
+        ],
+        "phonetic": {
+          "text": "/θɪn/",
+          "segments": [
+            { "highlight": true, "letters": "θ" },
+            { "highlight": false, "letters": "ɪn" }
+          ]
+        },
+        "audio": "audio/thin.mp3"
+      },
+      {
+        "word": "fin",
+        "definition": "A flattened appendage on a fish.",
+        "segments": [
+          { "highlight": true, "letters": "f" },
+          { "highlight": false, "letters": "in" }
+        ],
+        "phonetic": {
+          "text": "/fɪn/",
+          "segments": [
+            { "highlight": true, "letters": "f" },
+            { "highlight": false, "letters": "ɪn" }
+          ]
+        },
+        "audio": "audio/fin.mp3"
+      }
+    ]
+  },
+  {
+    "id": "seat-sit",
+    "contrast": {
+      "label": "/i:/ vs /ɪ/",
+      "sound_a": "i:",
+      "sound_b": "ɪ"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "seat",
+        "definition": "A place to sit.",
+        "segments": [
+          { "highlight": false, "letters": "s" },
+          { "highlight": true, "letters": "ea" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/si:t/",
+          "segments": [
+            { "highlight": false, "letters": "s" },
+            { "highlight": true, "letters": "i:" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/seat.mp3"
+      },
+      {
+        "word": "sit",
+        "definition": "To rest with the body supported by the buttocks.",
+        "segments": [
+          { "highlight": false, "letters": "s" },
+          { "highlight": true, "letters": "i" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/sɪt/",
+          "segments": [
+            { "highlight": false, "letters": "s" },
+            { "highlight": true, "letters": "ɪ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/sit.mp3"
+      }
+    ]
+  },
+  {
+    "id": "then-zen",
+    "contrast": {
+      "label": "/ð/ vs /z/",
+      "sound_a": "ð",
+      "sound_b": "z"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "then",
+        "definition": "At that time or next in order.",
+        "segments": [
+          { "highlight": true, "letters": "th" },
+          { "highlight": false, "letters": "en" }
+        ],
+        "phonetic": {
+          "text": "/ðen/",
+          "segments": [
+            { "highlight": true, "letters": "ð" },
+            { "highlight": false, "letters": "en" }
+          ]
+        },
+        "audio": "audio/then.mp3"
+      },
+      {
+        "word": "zen",
+        "definition": "A school of Buddhism emphasizing meditation.",
+        "segments": [
+          { "highlight": true, "letters": "z" },
+          { "highlight": false, "letters": "en" }
+        ],
+        "phonetic": {
+          "text": "/zen/",
+          "segments": [
+            { "highlight": true, "letters": "z" },
+            { "highlight": false, "letters": "en" }
+          ]
+        },
+        "audio": "audio/zen.mp3"
+      }
+    ]
+  },
+  {
+    "id": "go-glow",
+    "contrast": {
+      "label": "/əʊ/ vs /əʊ/",
+      "sound_a": "əʊ",
+      "sound_b": "əʊ"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "go",
+        "definition": "To move or travel.",
+        "segments": [
+          { "highlight": false, "letters": "g" },
+          { "highlight": true, "letters": "o" }
+        ],
+        "phonetic": {
+          "text": "/gəʊ/",
+          "segments": [
+            { "highlight": false, "letters": "g" },
+            { "highlight": true, "letters": "əʊ" }
+          ]
+        },
+        "audio": "audio/go.mp3"
+      },
+      {
+        "word": "glow",
+        "definition": "To emit steady light.",
+        "segments": [
+          { "highlight": false, "letters": "gl" },
+          { "highlight": true, "letters": "ow" }
+        ],
+        "phonetic": {
+          "text": "/gləʊ/",
+          "segments": [
+            { "highlight": false, "letters": "gl" },
+            { "highlight": true, "letters": "əʊ" }
+          ]
+        },
+        "audio": "audio/glow.mp3"
+      }
+    ]
+  },
+  {
+    "id": "ten-den",
+    "contrast": {
+      "label": "/t/ vs /d/",
+      "sound_a": "t",
+      "sound_b": "d"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "ten",
+        "definition": "The number 10.",
+        "segments": [
+          { "highlight": true, "letters": "t" },
+          { "highlight": false, "letters": "en" }
+        ],
+        "phonetic": {
+          "text": "/ten/",
+          "segments": [
+            { "highlight": true, "letters": "t" },
+            { "highlight": false, "letters": "en" }
+          ]
+        },
+        "audio": "audio/ten.mp3"
+      },
+      {
+        "word": "den",
+        "definition": "A small room or animal's lair.",
+        "segments": [
+          { "highlight": true, "letters": "d" },
+          { "highlight": false, "letters": "en" }
+        ],
+        "phonetic": {
+          "text": "/den/",
+          "segments": [
+            { "highlight": true, "letters": "d" },
+            { "highlight": false, "letters": "en" }
+          ]
+        },
+        "audio": "audio/den.mp3"
+      }
+    ]
+  },
+  {
+    "id": "rice-rise",
+    "contrast": {
+      "label": "/s/ vs /z/",
+      "sound_a": "s",
+      "sound_b": "z"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "rice",
+        "definition": "A cereal grain used as food.",
+        "segments": [
+          { "highlight": false, "letters": "ri" },
+          { "highlight": true, "letters": "ce" }
+        ],
+        "phonetic": {
+          "text": "/raɪs/",
+          "segments": [
+            { "highlight": false, "letters": "raɪ" },
+            { "highlight": true, "letters": "s" }
+          ]
+        },
+        "audio": "audio/rice.mp3"
+      },
+      {
+        "word": "rise",
+        "definition": "To move upward or increase.",
+        "segments": [
+          { "highlight": false, "letters": "ri" },
+          { "highlight": true, "letters": "se" }
+        ],
+        "phonetic": {
+          "text": "/raɪz/",
+          "segments": [
+            { "highlight": false, "letters": "raɪ" },
+            { "highlight": true, "letters": "z" }
+          ]
+        },
+        "audio": "audio/rise.mp3"
+      }
+    ]
+  },
+  {
+    "id": "pen-pan",
+    "contrast": {
+      "label": "/e/ vs /æ/",
+      "sound_a": "e",
+      "sound_b": "æ"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "pen",
+        "definition": "A writing instrument.",
+        "segments": [
+          { "highlight": false, "letters": "p" },
+          { "highlight": true, "letters": "e" },
+          { "highlight": false, "letters": "n" }
+        ],
+        "phonetic": {
+          "text": "/pen/",
+          "segments": [
+            { "highlight": false, "letters": "p" },
+            { "highlight": true, "letters": "e" },
+            { "highlight": false, "letters": "n" }
+          ]
+        },
+        "audio": "audio/pen.mp3"
+      },
+      {
+        "word": "pan",
+        "definition": "A cooking utensil.",
+        "segments": [
+          { "highlight": false, "letters": "p" },
+          { "highlight": true, "letters": "a" },
+          { "highlight": false, "letters": "n" }
+        ],
+        "phonetic": {
+          "text": "/pæn/",
+          "segments": [
+            { "highlight": false, "letters": "p" },
+            { "highlight": true, "letters": "æ" },
+            { "highlight": false, "letters": "n" }
+          ]
+        },
+        "audio": "audio/pan.mp3"
+      }
+    ]
+  },
+  {
+    "id": "light-right",
+    "contrast": {
+      "label": "/l/ vs /r/",
+      "sound_a": "l",
+      "sound_b": "r"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "light",
+        "definition": "Natural or artificial illumination.",
+        "segments": [
+          { "highlight": true, "letters": "l" },
+          { "highlight": false, "letters": "ight" }
+        ],
+        "phonetic": {
+          "text": "/laɪt/",
+          "segments": [
+            { "highlight": true, "letters": "l" },
+            { "highlight": false, "letters": "aɪt" }
+          ]
+        },
+        "audio": "audio/light.mp3"
+      },
+      {
+        "word": "right",
+        "definition": "Correct or the opposite of left.",
+        "segments": [
+          { "highlight": true, "letters": "r" },
+          { "highlight": false, "letters": "ight" }
+        ],
+        "phonetic": {
+          "text": "/raɪt/",
+          "segments": [
+            { "highlight": true, "letters": "r" },
+            { "highlight": false, "letters": "aɪt" }
+          ]
+        },
+        "audio": "audio/right.mp3"
+      }
+    ]
+  },
+  {
+    "id": "back-pack",
+    "contrast": {
+      "label": "/b/ vs /p/",
+      "sound_a": "b",
+      "sound_b": "p"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "back",
+        "definition": "The rear surface of the human body.",
+        "segments": [
+          { "highlight": true, "letters": "b" },
+          { "highlight": false, "letters": "ack" }
+        ],
+        "phonetic": {
+          "text": "/bæk/",
+          "segments": [
+            { "highlight": true, "letters": "b" },
+            { "highlight": false, "letters": "æk" }
+          ]
+        },
+        "audio": "audio/back.mp3"
+      },
+      {
+        "word": "pack",
+        "definition": "A bundle or group of things.",
+        "segments": [
+          { "highlight": true, "letters": "p" },
+          { "highlight": false, "letters": "ack" }
+        ],
+        "phonetic": {
+          "text": "/pæk/",
+          "segments": [
+            { "highlight": true, "letters": "p" },
+            { "highlight": false, "letters": "æk" }
+          ]
+        },
+        "audio": "audio/pack.mp3"
+      }
+    ]
+  },
+  {
+    "id": "bad-pad",
+    "contrast": {
+      "label": "/b/ vs /p/",
+      "sound_a": "b",
+      "sound_b": "p"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "bad",
+        "definition": "Of poor quality or not good.",
+        "segments": [
+          { "highlight": true, "letters": "b" },
+          { "highlight": false, "letters": "ad" }
+        ],
+        "phonetic": {
+          "text": "/bæd/",
+          "segments": [
+            { "highlight": true, "letters": "b" },
+            { "highlight": false, "letters": "æd" }
+          ]
+        },
+        "audio": "audio/bad.mp3"
+      },
+      {
+        "word": "pad",
+        "definition": "A cushion or protective covering.",
+        "segments": [
+          { "highlight": true, "letters": "p" },
+          { "highlight": false, "letters": "ad" }
+        ],
+        "phonetic": {
+          "text": "/pæd/",
+          "segments": [
+            { "highlight": true, "letters": "p" },
+            { "highlight": false, "letters": "æd" }
+          ]
+        },
+        "audio": "audio/pad.mp3"
+      }
+    ]
+  },
+  {
+    "id": "cop-cob",
+    "contrast": {
+      "label": "/p/ vs /b/",
+      "sound_a": "p",
+      "sound_b": "b"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "cop",
+        "definition": "A police officer (informal).",
+        "segments": [
+          { "highlight": false, "letters": "co" },
+          { "highlight": true, "letters": "p" }
+        ],
+        "phonetic": {
+          "text": "/kɒp/",
+          "segments": [
+            { "highlight": false, "letters": "kɒ" },
+            { "highlight": true, "letters": "p" }
+          ]
+        },
+        "audio": "audio/cop.mp3"
+      },
+      {
+        "word": "cob",
+        "definition": "The core of an ear of corn.",
+        "segments": [
+          { "highlight": false, "letters": "co" },
+          { "highlight": true, "letters": "b" }
+        ],
+        "phonetic": {
+          "text": "/kɒb/",
+          "segments": [
+            { "highlight": false, "letters": "kɒ" },
+            { "highlight": true, "letters": "b" }
+          ]
+        },
+        "audio": "audio/cob.mp3"
+      }
+    ]
+  },
+  {
+    "id": "big-pig",
+    "contrast": {
+      "label": "/b/ vs /p/",
+      "sound_a": "b",
+      "sound_b": "p"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "big",
+        "definition": "Large in size or extent.",
+        "segments": [
+          { "highlight": true, "letters": "b" },
+          { "highlight": false, "letters": "ig" }
+        ],
+        "phonetic": {
+          "text": "/bɪg/",
+          "segments": [
+            { "highlight": true, "letters": "b" },
+            { "highlight": false, "letters": "ɪg" }
+          ]
+        },
+        "audio": "audio/big.mp3"
+      },
+      {
+        "word": "pig",
+        "definition": "A domesticated farm animal.",
+        "segments": [
+          { "highlight": true, "letters": "p" },
+          { "highlight": false, "letters": "ig" }
+        ],
+        "phonetic": {
+          "text": "/pɪg/",
+          "segments": [
+            { "highlight": true, "letters": "p" },
+            { "highlight": false, "letters": "ɪg" }
+          ]
+        },
+        "audio": "audio/pig.mp3"
+      }
+    ]
+  },
+  {
+    "id": "men-man",
+    "contrast": {
+      "label": "/e/ vs /æ/",
+      "sound_a": "e",
+      "sound_b": "æ"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "men",
+        "definition": "Adult human males (plural).",
+        "segments": [
+          { "highlight": false, "letters": "m" },
+          { "highlight": true, "letters": "e" },
+          { "highlight": false, "letters": "n" }
+        ],
+        "phonetic": {
+          "text": "/men/",
+          "segments": [
+            { "highlight": false, "letters": "m" },
+            { "highlight": true, "letters": "e" },
+            { "highlight": false, "letters": "n" }
+          ]
+        },
+        "audio": "audio/men.mp3"
+      },
+      {
+        "word": "man",
+        "definition": "An adult human male.",
+        "segments": [
+          { "highlight": false, "letters": "m" },
+          { "highlight": true, "letters": "a" },
+          { "highlight": false, "letters": "n" }
+        ],
+        "phonetic": {
+          "text": "/mæn/",
+          "segments": [
+            { "highlight": false, "letters": "m" },
+            { "highlight": true, "letters": "æ" },
+            { "highlight": false, "letters": "n" }
+          ]
+        },
+        "audio": "audio/man.mp3"
+      }
+    ]
+  },
+  {
+    "id": "leaf-reef",
+    "contrast": {
+      "label": "/l/ vs /r/",
+      "sound_a": "l",
+      "sound_b": "r"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "leaf",
+        "definition": "A flattened structure of a plant.",
+        "segments": [
+          { "highlight": true, "letters": "l" },
+          { "highlight": false, "letters": "eaf" }
+        ],
+        "phonetic": {
+          "text": "/li:f/",
+          "segments": [
+            { "highlight": true, "letters": "l" },
+            { "highlight": false, "letters": "i:f" }
+          ]
+        },
+        "audio": "audio/leaf.mp3"
+      },
+      {
+        "word": "reef",
+        "definition": "A ridge of rock or coral in the sea.",
+        "segments": [
+          { "highlight": true, "letters": "r" },
+          { "highlight": false, "letters": "eef" }
+        ],
+        "phonetic": {
+          "text": "/ri:f/",
+          "segments": [
+            { "highlight": true, "letters": "r" },
+            { "highlight": false, "letters": "i:f" }
+          ]
+        },
+        "audio": "audio/reef.mp3"
+      }
+    ]
+  },
+  {
+    "id": "heat-hit",
+    "contrast": {
+      "label": "/i:/ vs /ɪ/",
+      "sound_a": "i:",
+      "sound_b": "ɪ"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "heat",
+        "definition": "The quality of being hot.",
+        "segments": [
+          { "highlight": false, "letters": "h" },
+          { "highlight": true, "letters": "ea" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/hi:t/",
+          "segments": [
+            { "highlight": false, "letters": "h" },
+            { "highlight": true, "letters": "i:" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/heat.mp3"
+      },
+      {
+        "word": "hit",
+        "definition": "To strike forcefully.",
+        "segments": [
+          { "highlight": false, "letters": "h" },
+          { "highlight": true, "letters": "i" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/hɪt/",
+          "segments": [
+            { "highlight": false, "letters": "h" },
+            { "highlight": true, "letters": "ɪ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/hit.mp3"
+      }
+    ]
+  },
+  {
+    "id": "lake-rake",
+    "contrast": {
+      "label": "/l/ vs /r/",
+      "sound_a": "l",
+      "sound_b": "r"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "lake",
+        "definition": "A large body of water.",
+        "segments": [
+          { "highlight": true, "letters": "l" },
+          { "highlight": false, "letters": "ake" }
+        ],
+        "phonetic": {
+          "text": "/leɪk/",
+          "segments": [
+            { "highlight": true, "letters": "l" },
+            { "highlight": false, "letters": "eɪk" }
+          ]
+        },
+        "audio": "audio/lake.mp3"
+      },
+      {
+        "word": "rake",
+        "definition": "A gardening tool with prongs.",
+        "segments": [
+          { "highlight": true, "letters": "r" },
+          { "highlight": false, "letters": "ake" }
+        ],
+        "phonetic": {
+          "text": "/reɪk/",
+          "segments": [
+            { "highlight": true, "letters": "r" },
+            { "highlight": false, "letters": "eɪk" }
+          ]
+        },
+        "audio": "audio/rake.mp3"
+      }
+    ]
+  },
+  {
+    "id": "bus-buzz",
+    "contrast": {
+      "label": "/s/ vs /z/",
+      "sound_a": "s",
+      "sound_b": "z"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "bus",
+        "definition": "A large motor vehicle for passengers.",
+        "segments": [
+          { "highlight": false, "letters": "bu" },
+          { "highlight": true, "letters": "s" }
+        ],
+        "phonetic": {
+          "text": "/bʌs/",
+          "segments": [
+            { "highlight": false, "letters": "bʌ" },
+            { "highlight": true, "letters": "s" }
+          ]
+        },
+        "audio": "audio/bus.mp3"
+      },
+      {
+        "word": "buzz",
+        "definition": "A low continuous sound.",
+        "segments": [
+          { "highlight": false, "letters": "bu" },
+          { "highlight": true, "letters": "zz" }
+        ],
+        "phonetic": {
+          "text": "/bʌz/",
+          "segments": [
+            { "highlight": false, "letters": "bʌ" },
+            { "highlight": true, "letters": "z" }
+          ]
+        },
+        "audio": "audio/buzz.mp3"
+      }
+    ]
+  },
+  {
+    "id": "cherry-sherry",
+    "contrast": {
+      "label": "/tʃ/ vs /ʃ/",
+      "sound_a": "tʃ",
+      "sound_b": "ʃ"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "cherry",
+        "definition": "A small round fruit.",
+        "segments": [
+          { "highlight": true, "letters": "ch" },
+          { "highlight": false, "letters": "erry" }
+        ],
+        "phonetic": {
+          "text": "/tʃeri/",
+          "segments": [
+            { "highlight": true, "letters": "tʃ" },
+            { "highlight": false, "letters": "eri" }
+          ]
+        },
+        "audio": "audio/cherry.mp3"
+      },
+      {
+        "word": "sherry",
+        "definition": "A fortified wine.",
+        "segments": [
+          { "highlight": true, "letters": "sh" },
+          { "highlight": false, "letters": "erry" }
+        ],
+        "phonetic": {
+          "text": "/ʃeri/",
+          "segments": [
+            { "highlight": true, "letters": "ʃ" },
+            { "highlight": false, "letters": "eri" }
+          ]
+        },
+        "audio": "audio/sherry.mp3"
+      }
+    ]
+  },
+  {
+    "id": "lot-not",
+    "contrast": {
+      "label": "/l/ vs /n/",
+      "sound_a": "l",
+      "sound_b": "n"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "lot",
+        "definition": "A large amount or a plot of land.",
+        "segments": [
+          { "highlight": true, "letters": "l" },
+          { "highlight": false, "letters": "ot" }
+        ],
+        "phonetic": {
+          "text": "/lɒt/",
+          "segments": [
+            { "highlight": true, "letters": "l" },
+            { "highlight": false, "letters": "ɒt" }
+          ]
+        },
+        "audio": "audio/lot.mp3"
+      },
+      {
+        "word": "not",
+        "definition": "Used to negate a statement.",
+        "segments": [
+          { "highlight": true, "letters": "n" },
+          { "highlight": false, "letters": "ot" }
+        ],
+        "phonetic": {
+          "text": "/nɒt/",
+          "segments": [
+            { "highlight": true, "letters": "n" },
+            { "highlight": false, "letters": "ɒt" }
+          ]
+        },
+        "audio": "audio/not.mp3"
+      }
+    ]
+  },
+  {
+    "id": "feet-fit",
+    "contrast": {
+      "label": "/i:/ vs /ɪ/",
+      "sound_a": "i:",
+      "sound_b": "ɪ"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "feet",
+        "definition": "The plural of foot.",
+        "segments": [
+          { "highlight": false, "letters": "f" },
+          { "highlight": true, "letters": "ee" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/fi:t/",
+          "segments": [
+            { "highlight": false, "letters": "f" },
+            { "highlight": true, "letters": "i:" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/feet.mp3"
+      },
+      {
+        "word": "fit",
+        "definition": "In good health or to be the right size.",
+        "segments": [
+          { "highlight": false, "letters": "f" },
+          { "highlight": true, "letters": "i" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/fɪt/",
+          "segments": [
+            { "highlight": false, "letters": "f" },
+            { "highlight": true, "letters": "ɪ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/fit.mp3"
+      }
+    ]
+  },
+  {
+    "id": "gate-kate",
+    "contrast": {
+      "label": "/g/ vs /k/",
+      "sound_a": "g",
+      "sound_b": "k"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "gate",
+        "definition": "A hinged barrier used to close an opening.",
+        "segments": [
+          { "highlight": true, "letters": "g" },
+          { "highlight": false, "letters": "ate" }
+        ],
+        "phonetic": {
+          "text": "/geɪt/",
+          "segments": [
+            { "highlight": true, "letters": "g" },
+            { "highlight": false, "letters": "eɪt" }
+          ]
+        },
+        "audio": "audio/gate.mp3"
+      },
+      {
+        "word": "kate",
+        "definition": "A female given name.",
+        "segments": [
+          { "highlight": true, "letters": "k" },
+          { "highlight": false, "letters": "ate" }
+        ],
+        "phonetic": {
+          "text": "/keɪt/",
+          "segments": [
+            { "highlight": true, "letters": "k" },
+            { "highlight": false, "letters": "eɪt" }
+          ]
+        },
+        "audio": "audio/kate.mp3"
+      }
+    ]
+  },
+  {
+    "id": "wish-which",
+    "contrast": {
+      "label": "/w/ vs /wh/",
+      "sound_a": "w",
+      "sound_b": "wh"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "wish",
+        "definition": "To desire or hope for something.",
+        "segments": [
+          { "highlight": true, "letters": "w" },
+          { "highlight": false, "letters": "ish" }
+        ],
+        "phonetic": {
+          "text": "/wɪʃ/",
+          "segments": [
+            { "highlight": true, "letters": "w" },
+            { "highlight": false, "letters": "ɪʃ" }
+          ]
+        },
+        "audio": "audio/wish.mp3"
+      },
+      {
+        "word": "which",
+        "definition": "Used to introduce a defining clause.",
+        "segments": [
+          { "highlight": true, "letters": "wh" },
+          { "highlight": false, "letters": "ich" }
+        ],
+        "phonetic": {
+          "text": "/wɪtʃ/",
+          "segments": [
+            { "highlight": true, "letters": "w" },
+            { "highlight": false, "letters": "ɪtʃ" }
+          ]
+        },
+        "audio": "audio/which.mp3"
+      }
+    ]
+  },
+  {
+    "id": "hot-hut",
+    "contrast": {
+      "label": "/ɒ/ vs /ʌ/",
+      "sound_a": "ɒ",
+      "sound_b": "ʌ"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "hot",
+        "definition": "Having a high temperature.",
+        "segments": [
+          { "highlight": false, "letters": "h" },
+          { "highlight": true, "letters": "o" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/hɒt/",
+          "segments": [
+            { "highlight": false, "letters": "h" },
+            { "highlight": true, "letters": "ɒ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/hot.mp3"
+      },
+      {
+        "word": "hut",
+        "definition": "A small simple dwelling.",
+        "segments": [
+          { "highlight": false, "letters": "h" },
+          { "highlight": true, "letters": "u" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/hʌt/",
+          "segments": [
+            { "highlight": false, "letters": "h" },
+            { "highlight": true, "letters": "ʌ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/hut.mp3"
+      }
+    ]
+  },
+  {
+    "id": "chose-shows",
+    "contrast": {
+      "label": "/tʃ/ vs /ʃ/",
+      "sound_a": "tʃ",
+      "sound_b": "ʃ"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "chose",
+        "definition": "Past tense of choose.",
+        "segments": [
+          { "highlight": true, "letters": "ch" },
+          { "highlight": false, "letters": "ose" }
+        ],
+        "phonetic": {
+          "text": "/tʃəʊz/",
+          "segments": [
+            { "highlight": true, "letters": "tʃ" },
+            { "highlight": false, "letters": "əʊz" }
+          ]
+        },
+        "audio": "audio/chose.mp3"
+      },
+      {
+        "word": "shows",
+        "definition": "Displays or performances.",
+        "segments": [
+          { "highlight": true, "letters": "sh" },
+          { "highlight": false, "letters": "ows" }
+        ],
+        "phonetic": {
+          "text": "/ʃəʊz/",
+          "segments": [
+            { "highlight": true, "letters": "ʃ" },
+            { "highlight": false, "letters": "əʊz" }
+          ]
+        },
+        "audio": "audio/shows.mp3"
+      }
+    ]
+  },
+  {
+    "id": "bet-but",
+    "contrast": {
+      "label": "/e/ vs /ʌ/",
+      "sound_a": "e",
+      "sound_b": "ʌ"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "bet",
+        "definition": "To risk money on the outcome of an event.",
+        "segments": [
+          { "highlight": false, "letters": "b" },
+          { "highlight": true, "letters": "e" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/bet/",
+          "segments": [
+            { "highlight": false, "letters": "b" },
+            { "highlight": true, "letters": "e" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/bet.mp3"
+      },
+      {
+        "word": "but",
+        "definition": "Used to introduce something contrasting.",
+        "segments": [
+          { "highlight": false, "letters": "b" },
+          { "highlight": true, "letters": "u" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/bʌt/",
+          "segments": [
+            { "highlight": false, "letters": "b" },
+            { "highlight": true, "letters": "ʌ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/but.mp3"
+      }
+    ]
+  },
+  {
+    "id": "wood-good",
+    "contrast": {
+      "label": "/w/ vs /g/",
+      "sound_a": "w",
+      "sound_b": "g"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "wood",
+        "definition": "The hard fibrous material from trees.",
+        "segments": [
+          { "highlight": true, "letters": "w" },
+          { "highlight": false, "letters": "ood" }
+        ],
+        "phonetic": {
+          "text": "/wʊd/",
+          "segments": [
+            { "highlight": true, "letters": "w" },
+            { "highlight": false, "letters": "ʊd" }
+          ]
+        },
+        "audio": "audio/wood.mp3"
+      },
+      {
+        "word": "good",
+        "definition": "Of high quality or morally right.",
+        "segments": [
+          { "highlight": true, "letters": "g" },
+          { "highlight": false, "letters": "ood" }
+        ],
+        "phonetic": {
+          "text": "/gʊd/",
+          "segments": [
+            { "highlight": true, "letters": "g" },
+            { "highlight": false, "letters": "ʊd" }
+          ]
+        },
+        "audio": "audio/good.mp3"
+      }
+    ]
+  },
+  {
+    "id": "vat-fat",
+    "contrast": {
+      "label": "/v/ vs /f/",
+      "sound_a": "v",
+      "sound_b": "f"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "vat",
+        "definition": "A large tank or container.",
+        "segments": [
+          { "highlight": true, "letters": "v" },
+          { "highlight": false, "letters": "at" }
+        ],
+        "phonetic": {
+          "text": "/væt/",
+          "segments": [
+            { "highlight": true, "letters": "v" },
+            { "highlight": false, "letters": "æt" }
+          ]
+        },
+        "audio": "audio/vat.mp3"
+      },
+      {
+        "word": "fat",
+        "definition": "Having excess flesh or containing fat.",
+        "segments": [
+          { "highlight": true, "letters": "f" },
+          { "highlight": false, "letters": "at" }
+        ],
+        "phonetic": {
+          "text": "/fæt/",
+          "segments": [
+            { "highlight": true, "letters": "f" },
+            { "highlight": false, "letters": "æt" }
+          ]
+        },
+        "audio": "audio/fat.mp3"
+      }
+    ]
+  },
+  {
+    "id": "hat-had",
+    "contrast": {
+      "label": "/t/ vs /d/",
+      "sound_a": "t",
+      "sound_b": "d"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "hat",
+        "definition": "A head covering.",
+        "segments": [
+          { "highlight": false, "letters": "ha" },
+          { "highlight": true, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/hæt/",
+          "segments": [
+            { "highlight": false, "letters": "hæ" },
+            { "highlight": true, "letters": "t" }
+          ]
+        },
+        "audio": "audio/hat.mp3"
+      },
+      {
+        "word": "had",
+        "definition": "Past tense of have.",
+        "segments": [
+          { "highlight": false, "letters": "ha" },
+          { "highlight": true, "letters": "d" }
+        ],
+        "phonetic": {
+          "text": "/hæd/",
+          "segments": [
+            { "highlight": false, "letters": "hæ" },
+            { "highlight": true, "letters": "d" }
+          ]
+        },
+        "audio": "audio/had.mp3"
+      }
+    ]
+  },
+  {
+    "id": "class-grass",
+    "contrast": {
+      "label": "/kl/ vs /gr/",
+      "sound_a": "kl",
+      "sound_b": "gr"
+    },
+    "difficulty": "medium",
+    "pair": [
+      {
+        "word": "class",
+        "definition": "A group of students or a social category.",
+        "segments": [
+          { "highlight": true, "letters": "cl" },
+          { "highlight": false, "letters": "ass" }
+        ],
+        "phonetic": {
+          "text": "/klɑ:s/",
+          "segments": [
+            { "highlight": true, "letters": "kl" },
+            { "highlight": false, "letters": "ɑ:s" }
+          ]
+        },
+        "audio": "audio/class.mp3"
+      },
+      {
+        "word": "grass",
+        "definition": "Green plants covering the ground.",
+        "segments": [
+          { "highlight": true, "letters": "gr" },
+          { "highlight": false, "letters": "ass" }
+        ],
+        "phonetic": {
+          "text": "/grɑ:s/",
+          "segments": [
+            { "highlight": true, "letters": "gr" },
+            { "highlight": false, "letters": "ɑ:s" }
+          ]
+        },
+        "audio": "audio/grass.mp3"
+      }
+    ]
+  },
+  {
+    "id": "road-load",
+    "contrast": {
+      "label": "/r/ vs /l/",
+      "sound_a": "r",
+      "sound_b": "l"
+    },
+    "difficulty": "hard",
+    "pair": [
+      {
+        "word": "road",
+        "definition": "A wide way for vehicles.",
+        "segments": [
+          { "highlight": true, "letters": "r" },
+          { "highlight": false, "letters": "oad" }
+        ],
+        "phonetic": {
+          "text": "/rəʊd/",
+          "segments": [
+            { "highlight": true, "letters": "r" },
+            { "highlight": false, "letters": "əʊd" }
+          ]
+        },
+        "audio": "audio/road.mp3"
+      },
+      {
+        "word": "load",
+        "definition": "A heavy or bulky thing carried.",
+        "segments": [
+          { "highlight": true, "letters": "l" },
+          { "highlight": false, "letters": "oad" }
+        ],
+        "phonetic": {
+          "text": "/ləʊd/",
+          "segments": [
+            { "highlight": true, "letters": "l" },
+            { "highlight": false, "letters": "əʊd" }
+          ]
+        },
+        "audio": "audio/load.mp3"
+      }
+    ]
+  },
+  {
+    "id": "bit-bat",
+    "contrast": {
+      "label": "/ɪ/ vs /æ/",
+      "sound_a": "ɪ",
+      "sound_b": "æ"
+    },
+    "difficulty": "easy",
+    "pair": [
+      {
+        "word": "bit",
+        "definition": "A small piece or amount.",
+        "segments": [
+          { "highlight": false, "letters": "b" },
+          { "highlight": true, "letters": "i" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/bɪt/",
+          "segments": [
+            { "highlight": false, "letters": "b" },
+            { "highlight": true, "letters": "ɪ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/bit.mp3"
+      },
+      {
+        "word": "bat",
+        "definition": "A wooden stick used in baseball.",
+        "segments": [
+          { "highlight": false, "letters": "b" },
+          { "highlight": true, "letters": "a" },
+          { "highlight": false, "letters": "t" }
+        ],
+        "phonetic": {
+          "text": "/bæt/",
+          "segments": [
+            { "highlight": false, "letters": "b" },
+            { "highlight": true, "letters": "æ" },
+            { "highlight": false, "letters": "t" }
+          ]
+        },
+        "audio": "audio/bat.mp3"
+      }
+    ]
+  }
+]
